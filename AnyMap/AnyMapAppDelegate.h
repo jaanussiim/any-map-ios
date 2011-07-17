@@ -22,4 +22,6 @@
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 
+- (UIViewController *)createMainViewController;
+
 @end

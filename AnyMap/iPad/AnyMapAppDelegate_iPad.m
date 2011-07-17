@@ -15,11 +15,17 @@
  */
 
 #import "AnyMapAppDelegate_iPad.h"
+#import "LargeMapViewController.h"
 
 @implementation AnyMapAppDelegate_iPad
 
 - (void)dealloc {
   [super dealloc];
 }
+
+- (UIViewController *)createMainViewController {
+  return [[[LargeMapViewController alloc] init] autorelease];
+}
+
 
 @end

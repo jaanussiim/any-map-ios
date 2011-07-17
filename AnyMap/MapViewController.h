@@ -14,18 +14,11 @@
  * limitations under the License.
  */
 
-#import "AnyMapAppDelegate_iPhone.h"
-#import "SmallMapViewController.h"
+#import <Foundation/Foundation.h>
 
-@implementation AnyMapAppDelegate_iPhone
 
-- (void)dealloc {
-  [super dealloc];
+@interface MapViewController : UIViewController {
+
 }
-
-- (UIViewController *)createMainViewController {
-  return [[[SmallMapViewController alloc] init] autorelease];
-}
-
 
 @end

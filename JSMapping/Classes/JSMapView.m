@@ -14,18 +14,36 @@
  * limitations under the License.
  */
 
-#import "AnyMapAppDelegate_iPhone.h"
-#import "SmallMapViewController.h"
+#import "JSMapView.h"
 
-@implementation AnyMapAppDelegate_iPhone
+@interface JSMapView (Private)
 
-- (void)dealloc {
-  [super dealloc];
+- (void)initializeView;
+
+@end
+
+@implementation JSMapView
+- (id)initWithFrame:(CGRect)frame {
+  self = [super initWithFrame:frame];
+
+  if (self != nil) {
+    [self initializeView];
+  }
+
+  return self;
 }
 
-- (UIViewController *)createMainViewController {
-  return [[[SmallMapViewController alloc] init] autorelease];
+- (id)initWithCoder:(NSCoder *)aDecoder {
+  self = [super initWithCoder:aDecoder];
+  if (self != nil) {
+    [self initializeView];
+  }
+
+  return self;
 }
 
+- (void)initializeView {
+  [self setBackgroundColor:[UIColor blueColor]];
+}
 
 @end

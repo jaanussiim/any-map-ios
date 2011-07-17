@@ -27,6 +27,10 @@
 		EA262B3413D2D1CA006574FB /* JSWgsPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = EA262B2913D2CF27006574FB /* JSWgsPoint.m */; };
 		EA262B3513D2D1DA006574FB /* JSMapPos.m in Sources */ = {isa = PBXBuildFile; fileRef = EA262B2613D2CEC3006574FB /* JSMapPos.m */; };
 		EA262B3613D2D1E6006574FB /* JSBaseProjection.m in Sources */ = {isa = PBXBuildFile; fileRef = EA262B1A13D2CDE6006574FB /* JSBaseProjection.m */; };
+		EA262B3A13D2D858006574FB /* SmallMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA262B3813D2D858006574FB /* SmallMapViewController.m */; };
+		EA262B3B13D2D858006574FB /* SmallMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA262B3913D2D858006574FB /* SmallMapViewController.xib */; };
+		EA262B3F13D2D870006574FB /* LargeMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA262B3D13D2D870006574FB /* LargeMapViewController.m */; };
+		EA262B4013D2D870006574FB /* LargeMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA262B3E13D2D870006574FB /* LargeMapViewController.xib */; };
 		EA6DDC5813D2C2CF0054A79B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6DDC5713D2C2CF0054A79B /* UIKit.framework */; };
 		EA6DDC5A13D2C2CF0054A79B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6DDC5913D2C2CF0054A79B /* Foundation.framework */; };
 		EA6DDC5C13D2C2CF0054A79B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6DDC5B13D2C2CF0054A79B /* CoreGraphics.framework */; };
@@ -37,6 +41,8 @@
 		EA6DDC6F13D2C2CF0054A79B /* MainWindow_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA6DDC6D13D2C2CF0054A79B /* MainWindow_iPhone.xib */; };
 		EA6DDC7313D2C2CF0054A79B /* AnyMapAppDelegate_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6DDC7213D2C2CF0054A79B /* AnyMapAppDelegate_iPad.m */; };
 		EA6DDC7613D2C2CF0054A79B /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA6DDC7413D2C2CF0054A79B /* MainWindow_iPad.xib */; };
+		EA6DDC7B13D2C2CF0054A79D /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6DDC7B13D2C2CF0054A79C /* MapViewController.m */; };
+		EA6DDC7B13D2C2CF0054A7A0 /* JSMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6DDC7B13D2C2CF0054A79F /* JSMapView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +84,12 @@
 		EA262B2813D2CF27006574FB /* JSWgsPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSWgsPoint.h; sourceTree = "<group>"; };
 		EA262B2913D2CF27006574FB /* JSWgsPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSWgsPoint.m; sourceTree = "<group>"; };
 		EA262B2B13D2CFE2006574FB /* libProj4.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libProj4.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA262B3713D2D858006574FB /* SmallMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmallMapViewController.h; sourceTree = "<group>"; };
+		EA262B3813D2D858006574FB /* SmallMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmallMapViewController.m; sourceTree = "<group>"; };
+		EA262B3913D2D858006574FB /* SmallMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SmallMapViewController.xib; sourceTree = "<group>"; };
+		EA262B3C13D2D870006574FB /* LargeMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LargeMapViewController.h; sourceTree = "<group>"; };
+		EA262B3D13D2D870006574FB /* LargeMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LargeMapViewController.m; sourceTree = "<group>"; };
+		EA262B3E13D2D870006574FB /* LargeMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LargeMapViewController.xib; sourceTree = "<group>"; };
 		EA6DDC5313D2C2CF0054A79B /* AnyMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnyMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA6DDC5713D2C2CF0054A79B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EA6DDC5913D2C2CF0054A79B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -94,6 +106,10 @@
 		EA6DDC7113D2C2CF0054A79B /* AnyMapAppDelegate_iPad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AnyMapAppDelegate_iPad.h; path = iPad/AnyMapAppDelegate_iPad.h; sourceTree = "<group>"; };
 		EA6DDC7213D2C2CF0054A79B /* AnyMapAppDelegate_iPad.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AnyMapAppDelegate_iPad.m; path = iPad/AnyMapAppDelegate_iPad.m; sourceTree = "<group>"; };
 		EA6DDC7513D2C2CF0054A79B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = iPad/en.lproj/MainWindow_iPad.xib; sourceTree = "<group>"; };
+		EA6DDC7B13D2C2CF0054A79C /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		EA6DDC7B13D2C2CF0054A79E /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		EA6DDC7B13D2C2CF0054A79F /* JSMapView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSMapView.m; sourceTree = "<group>"; };
+		EA6DDC7B13D2C2CF0054A7A1 /* JSMapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSMapView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +189,7 @@
 		EA262B1513D2CDE6006574FB /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				EA262B4C13D2D97A006574FB /* Views */,
 				EA262B2413D2CEB8006574FB /* Components */,
 				EA262B1F13D2CDEC006574FB /* Projections */,
 				EA262B1613D2CDE6006574FB /* Constants.h */,
@@ -219,6 +236,24 @@
 			name = Components;
 			sourceTree = "<group>";
 		};
+		EA262B4113D2D8F2006574FB /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				EA6DDC7B13D2C2CF0054A79E /* MapViewController.h */,
+				EA6DDC7B13D2C2CF0054A79C /* MapViewController.m */,
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
+		EA262B4C13D2D97A006574FB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EA6DDC7B13D2C2CF0054A7A1 /* JSMapView.h */,
+				EA6DDC7B13D2C2CF0054A79F /* JSMapView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		EA6DDC4813D2C2CF0054A79B = {
 			isa = PBXGroup;
 			children = (
@@ -257,6 +292,7 @@
 		EA6DDC5D13D2C2CF0054A79B /* AnyMap */ = {
 			isa = PBXGroup;
 			children = (
+				EA262B4113D2D8F2006574FB /* Shared */,
 				EA6DDC6613D2C2CF0054A79B /* AnyMapAppDelegate.h */,
 				EA6DDC6713D2C2CF0054A79B /* AnyMapAppDelegate.m */,
 				EA6DDC6913D2C2CF0054A79B /* iPhone */,
@@ -283,6 +319,9 @@
 				EA6DDC6A13D2C2CF0054A79B /* AnyMapAppDelegate_iPhone.h */,
 				EA6DDC6B13D2C2CF0054A79B /* AnyMapAppDelegate_iPhone.m */,
 				EA6DDC6D13D2C2CF0054A79B /* MainWindow_iPhone.xib */,
+				EA262B3713D2D858006574FB /* SmallMapViewController.h */,
+				EA262B3813D2D858006574FB /* SmallMapViewController.m */,
+				EA262B3913D2D858006574FB /* SmallMapViewController.xib */,
 			);
 			name = iPhone;
 			sourceTree = "<group>";
@@ -293,6 +332,9 @@
 				EA6DDC7113D2C2CF0054A79B /* AnyMapAppDelegate_iPad.h */,
 				EA6DDC7213D2C2CF0054A79B /* AnyMapAppDelegate_iPad.m */,
 				EA6DDC7413D2C2CF0054A79B /* MainWindow_iPad.xib */,
+				EA262B3C13D2D870006574FB /* LargeMapViewController.h */,
+				EA262B3D13D2D870006574FB /* LargeMapViewController.m */,
+				EA262B3E13D2D870006574FB /* LargeMapViewController.xib */,
 			);
 			name = iPad;
 			sourceTree = "<group>";
@@ -390,6 +432,8 @@
 				EA6DDC6213D2C2CF0054A79B /* InfoPlist.strings in Resources */,
 				EA6DDC6F13D2C2CF0054A79B /* MainWindow_iPhone.xib in Resources */,
 				EA6DDC7613D2C2CF0054A79B /* MainWindow_iPad.xib in Resources */,
+				EA262B3B13D2D858006574FB /* SmallMapViewController.xib in Resources */,
+				EA262B4013D2D870006574FB /* LargeMapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +466,10 @@
 				EA262B1E13D2CDE6006574FB /* JSBaseProjection.m in Sources */,
 				EA262B2713D2CEC3006574FB /* JSMapPos.m in Sources */,
 				EA262B2A13D2CF27006574FB /* JSWgsPoint.m in Sources */,
+				EA262B3A13D2D858006574FB /* SmallMapViewController.m in Sources */,
+				EA262B3F13D2D870006574FB /* LargeMapViewController.m in Sources */,
+				EA6DDC7B13D2C2CF0054A79D /* MapViewController.m in Sources */,
+				EA6DDC7B13D2C2CF0054A7A0 /* JSMapView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,6 +649,7 @@
 				EA262AE413D2C692006574FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EA6DDC4D13D2C2CF0054A79B /* Build configuration list for PBXProject "AnyMap" */ = {
 			isa = XCConfigurationList;

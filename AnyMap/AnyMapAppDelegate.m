@@ -22,8 +22,11 @@
 @synthesize window = _window;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  // Override point for customization after application launch.
+  UIViewController *controller = [self createMainViewController];
+
+  [self.window setRootViewController:controller];
   [self.window makeKeyAndVisible];
+
   return YES;
 }
 
@@ -65,5 +68,12 @@
   [_window release];
   [super dealloc];
 }
+
+- (UIViewController *)createMainViewController {
+  NSLog(@"Override in device delegate");
+  [self doesNotRecognizeSelector:_cmd];
+  return nil;
+}
+
 
 @end

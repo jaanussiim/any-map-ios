@@ -14,18 +14,13 @@
  * limitations under the License.
  */
 
-#import "AnyMapAppDelegate_iPhone.h"
-#import "SmallMapViewController.h"
+#import "LargeMapViewController.h"
 
-@implementation AnyMapAppDelegate_iPhone
 
-- (void)dealloc {
-  [super dealloc];
+@implementation LargeMapViewController
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+  return YES;
 }
-
-- (UIViewController *)createMainViewController {
-  return [[[SmallMapViewController alloc] init] autorelease];
-}
-
 
 @end

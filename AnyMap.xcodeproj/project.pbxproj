@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA262AD013D2C692006574FB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6DDC5713D2C2CF0054A79B /* UIKit.framework */; };
+		EA262AD113D2C692006574FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6DDC5913D2C2CF0054A79B /* Foundation.framework */; };
+		EA262AD213D2C692006574FB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6DDC5B13D2C2CF0054A79B /* CoreGraphics.framework */; };
+		EA262AD813D2C692006574FB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA262AD613D2C692006574FB /* InfoPlist.strings */; };
+		EA262ADB13D2C692006574FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA262ADA13D2C692006574FB /* main.m */; };
+		EA262AE613D2C6F2006574FB /* GHUnitIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA262AE513D2C6F2006574FB /* GHUnitIOS.framework */; };
+		EA262AE913D2C811006574FB /* SampleTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EA262AE813D2C811006574FB /* SampleTest.m */; };
 		EA6DDC5813D2C2CF0054A79B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6DDC5713D2C2CF0054A79B /* UIKit.framework */; };
 		EA6DDC5A13D2C2CF0054A79B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6DDC5913D2C2CF0054A79B /* Foundation.framework */; };
 		EA6DDC5C13D2C2CF0054A79B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6DDC5B13D2C2CF0054A79B /* CoreGraphics.framework */; };
@@ -20,6 +27,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EA262ACE13D2C692006574FB /* UnitTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnitTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA262AD513D2C692006574FB /* UnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
+		EA262AD713D2C692006574FB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EA262AD913D2C692006574FB /* UnitTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UnitTests-Prefix.pch"; sourceTree = "<group>"; };
+		EA262ADA13D2C692006574FB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EA262AE513D2C6F2006574FB /* GHUnitIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GHUnitIOS.framework; sourceTree = "<group>"; };
+		EA262AE813D2C811006574FB /* SampleTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleTest.m; sourceTree = "<group>"; };
 		EA6DDC5313D2C2CF0054A79B /* AnyMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnyMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA6DDC5713D2C2CF0054A79B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EA6DDC5913D2C2CF0054A79B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -39,6 +53,17 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		EA262ACB13D2C692006574FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA262AD013D2C692006574FB /* UIKit.framework in Frameworks */,
+				EA262AD113D2C692006574FB /* Foundation.framework in Frameworks */,
+				EA262AD213D2C692006574FB /* CoreGraphics.framework in Frameworks */,
+				EA262AE613D2C6F2006574FB /* GHUnitIOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA6DDC5013D2C2CF0054A79B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -52,11 +77,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA262AC713D2C62A006574FB /* TestFrameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA262AE513D2C6F2006574FB /* GHUnitIOS.framework */,
+			);
+			path = TestFrameworks;
+			sourceTree = "<group>";
+		};
+		EA262AD313D2C692006574FB /* UnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				EA262AD413D2C692006574FB /* Supporting Files */,
+				EA262AE813D2C811006574FB /* SampleTest.m */,
+			);
+			path = UnitTests;
+			sourceTree = "<group>";
+		};
+		EA262AD413D2C692006574FB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA262AD513D2C692006574FB /* UnitTests-Info.plist */,
+				EA262AD613D2C692006574FB /* InfoPlist.strings */,
+				EA262AD913D2C692006574FB /* UnitTests-Prefix.pch */,
+				EA262ADA13D2C692006574FB /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		EA6DDC4813D2C2CF0054A79B = {
 			isa = PBXGroup;
 			children = (
 				EA6DDC5D13D2C2CF0054A79B /* AnyMap */,
+				EA262AD313D2C692006574FB /* UnitTests */,
 				EA6DDC5613D2C2CF0054A79B /* Frameworks */,
+				EA262AC713D2C62A006574FB /* TestFrameworks */,
 				EA6DDC5413D2C2CF0054A79B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				EA6DDC5313D2C2CF0054A79B /* AnyMap.app */,
+				EA262ACE13D2C692006574FB /* UnitTests.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,6 +181,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		EA262ACD13D2C692006574FB /* UnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA262AE213D2C692006574FB /* Build configuration list for PBXNativeTarget "UnitTests" */;
+			buildPhases = (
+				EA262ACA13D2C692006574FB /* Sources */,
+				EA262ACB13D2C692006574FB /* Frameworks */,
+				EA262ACC13D2C692006574FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UnitTests;
+			productName = UnitTests;
+			productReference = EA262ACE13D2C692006574FB /* UnitTests.app */;
+			productType = "com.apple.product-type.application";
+		};
 		EA6DDC5213D2C2CF0054A79B /* AnyMap */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA6DDC7913D2C2CF0054A79B /* Build configuration list for PBXNativeTarget "AnyMap" */;
@@ -160,11 +233,20 @@
 			projectRoot = "";
 			targets = (
 				EA6DDC5213D2C2CF0054A79B /* AnyMap */,
+				EA262ACD13D2C692006574FB /* UnitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		EA262ACC13D2C692006574FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA262AD813D2C692006574FB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA6DDC5113D2C2CF0054A79B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -178,6 +260,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		EA262ACA13D2C692006574FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA262ADB13D2C692006574FB /* main.m in Sources */,
+				EA262AE913D2C811006574FB /* SampleTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA6DDC4F13D2C2CF0054A79B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -192,6 +283,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		EA262AD613D2C692006574FB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA262AD713D2C692006574FB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		EA6DDC6013D2C2CF0054A79B /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -219,6 +318,58 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		EA262AE313D2C692006574FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/TestFrameworks\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UnitTests/UnitTests-Prefix.pch";
+				INFOPLIST_FILE = "UnitTests/UnitTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EA262AE413D2C692006574FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/TestFrameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UnitTests/UnitTests-Prefix.pch";
+				INFOPLIST_FILE = "UnitTests/UnitTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 		EA6DDC7713D2C2CF0054A79B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -262,6 +413,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AnyMap/AnyMap-Prefix.pch";
 				INFOPLIST_FILE = "AnyMap/AnyMap-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -275,6 +427,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AnyMap/AnyMap-Prefix.pch";
 				INFOPLIST_FILE = "AnyMap/AnyMap-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
@@ -284,6 +437,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		EA262AE213D2C692006574FB /* Build configuration list for PBXNativeTarget "UnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA262AE313D2C692006574FB /* Debug */,
+				EA262AE413D2C692006574FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		EA6DDC4D13D2C2CF0054A79B /* Build configuration list for PBXProject "AnyMap" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -300,6 +461,7 @@
 				EA6DDC7B13D2C2CF0054A79B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

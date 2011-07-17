@@ -14,6 +14,19 @@
 		EA262ADB13D2C692006574FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA262ADA13D2C692006574FB /* main.m */; };
 		EA262AE613D2C6F2006574FB /* GHUnitIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA262AE513D2C6F2006574FB /* GHUnitIOS.framework */; };
 		EA262AE913D2C811006574FB /* SampleTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EA262AE813D2C811006574FB /* SampleTest.m */; };
+		EA262B1113D2CCDB006574FB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA262B1013D2CCDB006574FB /* CoreLocation.framework */; };
+		EA262B1D13D2CDE6006574FB /* EPSG3785.m in Sources */ = {isa = PBXBuildFile; fileRef = EA262B1813D2CDE6006574FB /* EPSG3785.m */; };
+		EA262B1E13D2CDE6006574FB /* JSBaseProjection.m in Sources */ = {isa = PBXBuildFile; fileRef = EA262B1A13D2CDE6006574FB /* JSBaseProjection.m */; };
+		EA262B2313D2CE2F006574FB /* EPSG3785Test.m in Sources */ = {isa = PBXBuildFile; fileRef = EA262B2213D2CE2F006574FB /* EPSG3785Test.m */; };
+		EA262B2713D2CEC3006574FB /* JSMapPos.m in Sources */ = {isa = PBXBuildFile; fileRef = EA262B2613D2CEC3006574FB /* JSMapPos.m */; };
+		EA262B2A13D2CF27006574FB /* JSWgsPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = EA262B2913D2CF27006574FB /* JSWgsPoint.m */; };
+		EA262B2C13D2CFE2006574FB /* libProj4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA262B2B13D2CFE2006574FB /* libProj4.a */; };
+		EA262B2F13D2D00F006574FB /* libProj4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA262B2B13D2CFE2006574FB /* libProj4.a */; };
+		EA262B3013D2D09C006574FB /* EPSG3785.m in Sources */ = {isa = PBXBuildFile; fileRef = EA262B1813D2CDE6006574FB /* EPSG3785.m */; };
+		EA262B3313D2D17E006574FB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA262B1013D2CCDB006574FB /* CoreLocation.framework */; };
+		EA262B3413D2D1CA006574FB /* JSWgsPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = EA262B2913D2CF27006574FB /* JSWgsPoint.m */; };
+		EA262B3513D2D1DA006574FB /* JSMapPos.m in Sources */ = {isa = PBXBuildFile; fileRef = EA262B2613D2CEC3006574FB /* JSMapPos.m */; };
+		EA262B3613D2D1E6006574FB /* JSBaseProjection.m in Sources */ = {isa = PBXBuildFile; fileRef = EA262B1A13D2CDE6006574FB /* JSBaseProjection.m */; };
 		EA6DDC5813D2C2CF0054A79B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6DDC5713D2C2CF0054A79B /* UIKit.framework */; };
 		EA6DDC5A13D2C2CF0054A79B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6DDC5913D2C2CF0054A79B /* Foundation.framework */; };
 		EA6DDC5C13D2C2CF0054A79B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6DDC5B13D2C2CF0054A79B /* CoreGraphics.framework */; };
@@ -26,6 +39,23 @@
 		EA6DDC7613D2C2CF0054A79B /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA6DDC7413D2C2CF0054A79B /* MainWindow_iPad.xib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		EA262B0513D2CB25006574FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA262AFE13D2CB24006574FB /* Proj4.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = Proj4;
+		};
+		EA262B0713D2CB31006574FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA262AFE13D2CB24006574FB /* Proj4.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = Proj4;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		EA262ACE13D2C692006574FB /* UnitTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnitTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA262AD513D2C692006574FB /* UnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
@@ -34,6 +64,20 @@
 		EA262ADA13D2C692006574FB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EA262AE513D2C6F2006574FB /* GHUnitIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GHUnitIOS.framework; sourceTree = "<group>"; };
 		EA262AE813D2C811006574FB /* SampleTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleTest.m; sourceTree = "<group>"; };
+		EA262AFE13D2CB24006574FB /* Proj4.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Proj4.xcodeproj; path = Proj4/Proj4.xcodeproj; sourceTree = "<group>"; };
+		EA262B1013D2CCDB006574FB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		EA262B1613D2CDE6006574FB /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		EA262B1713D2CDE6006574FB /* EPSG3785.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPSG3785.h; sourceTree = "<group>"; };
+		EA262B1813D2CDE6006574FB /* EPSG3785.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSG3785.m; sourceTree = "<group>"; };
+		EA262B1913D2CDE6006574FB /* JSBaseProjection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBaseProjection.h; sourceTree = "<group>"; };
+		EA262B1A13D2CDE6006574FB /* JSBaseProjection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBaseProjection.m; sourceTree = "<group>"; };
+		EA262B1B13D2CDE6006574FB /* JSProjection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSProjection.h; sourceTree = "<group>"; };
+		EA262B2213D2CE2F006574FB /* EPSG3785Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPSG3785Test.m; sourceTree = "<group>"; };
+		EA262B2513D2CEC3006574FB /* JSMapPos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSMapPos.h; sourceTree = "<group>"; };
+		EA262B2613D2CEC3006574FB /* JSMapPos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSMapPos.m; sourceTree = "<group>"; };
+		EA262B2813D2CF27006574FB /* JSWgsPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSWgsPoint.h; sourceTree = "<group>"; };
+		EA262B2913D2CF27006574FB /* JSWgsPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSWgsPoint.m; sourceTree = "<group>"; };
+		EA262B2B13D2CFE2006574FB /* libProj4.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libProj4.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA6DDC5313D2C2CF0054A79B /* AnyMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnyMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA6DDC5713D2C2CF0054A79B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EA6DDC5913D2C2CF0054A79B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -61,6 +105,8 @@
 				EA262AD113D2C692006574FB /* Foundation.framework in Frameworks */,
 				EA262AD213D2C692006574FB /* CoreGraphics.framework in Frameworks */,
 				EA262AE613D2C6F2006574FB /* GHUnitIOS.framework in Frameworks */,
+				EA262B2F13D2D00F006574FB /* libProj4.a in Frameworks */,
+				EA262B3313D2D17E006574FB /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +114,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA262B2C13D2CFE2006574FB /* libProj4.a in Frameworks */,
+				EA262B1113D2CCDB006574FB /* CoreLocation.framework in Frameworks */,
 				EA6DDC5813D2C2CF0054A79B /* UIKit.framework in Frameworks */,
 				EA6DDC5A13D2C2CF0054A79B /* Foundation.framework in Frameworks */,
 				EA6DDC5C13D2C2CF0054A79B /* CoreGraphics.framework in Frameworks */,
@@ -105,9 +153,76 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		EA262AFF13D2CB24006574FB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA262B0613D2CB25006574FB /* libProj4.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA262B0913D2CB70006574FB /* JSMapping */ = {
+			isa = PBXGroup;
+			children = (
+				EA262B1513D2CDE6006574FB /* Classes */,
+				EA262B1C13D2CDE6006574FB /* TestClasses */,
+			);
+			path = JSMapping;
+			sourceTree = "<group>";
+		};
+		EA262B1513D2CDE6006574FB /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EA262B2413D2CEB8006574FB /* Components */,
+				EA262B1F13D2CDEC006574FB /* Projections */,
+				EA262B1613D2CDE6006574FB /* Constants.h */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		EA262B1C13D2CDE6006574FB /* TestClasses */ = {
+			isa = PBXGroup;
+			children = (
+				EA262B2013D2CE16006574FB /* Projections */,
+			);
+			path = TestClasses;
+			sourceTree = "<group>";
+		};
+		EA262B1F13D2CDEC006574FB /* Projections */ = {
+			isa = PBXGroup;
+			children = (
+				EA262B1713D2CDE6006574FB /* EPSG3785.h */,
+				EA262B1813D2CDE6006574FB /* EPSG3785.m */,
+				EA262B1913D2CDE6006574FB /* JSBaseProjection.h */,
+				EA262B1A13D2CDE6006574FB /* JSBaseProjection.m */,
+				EA262B1B13D2CDE6006574FB /* JSProjection.h */,
+			);
+			name = Projections;
+			sourceTree = "<group>";
+		};
+		EA262B2013D2CE16006574FB /* Projections */ = {
+			isa = PBXGroup;
+			children = (
+				EA262B2213D2CE2F006574FB /* EPSG3785Test.m */,
+			);
+			name = Projections;
+			sourceTree = "<group>";
+		};
+		EA262B2413D2CEB8006574FB /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				EA262B2513D2CEC3006574FB /* JSMapPos.h */,
+				EA262B2613D2CEC3006574FB /* JSMapPos.m */,
+				EA262B2813D2CF27006574FB /* JSWgsPoint.h */,
+				EA262B2913D2CF27006574FB /* JSWgsPoint.m */,
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
 		EA6DDC4813D2C2CF0054A79B = {
 			isa = PBXGroup;
 			children = (
+				EA262B0913D2CB70006574FB /* JSMapping */,
 				EA6DDC5D13D2C2CF0054A79B /* AnyMap */,
 				EA262AD313D2C692006574FB /* UnitTests */,
 				EA6DDC5613D2C2CF0054A79B /* Frameworks */,
@@ -115,6 +230,7 @@
 				EA6DDC5413D2C2CF0054A79B /* Products */,
 			);
 			sourceTree = "<group>";
+			wrapsLines = 0;
 		};
 		EA6DDC5413D2C2CF0054A79B /* Products */ = {
 			isa = PBXGroup;
@@ -128,6 +244,9 @@
 		EA6DDC5613D2C2CF0054A79B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EA262B1013D2CCDB006574FB /* CoreLocation.framework */,
+				EA262B2B13D2CFE2006574FB /* libProj4.a */,
+				EA262AFE13D2CB24006574FB /* Proj4.xcodeproj */,
 				EA6DDC5713D2C2CF0054A79B /* UIKit.framework */,
 				EA6DDC5913D2C2CF0054A79B /* Foundation.framework */,
 				EA6DDC5B13D2C2CF0054A79B /* CoreGraphics.framework */,
@@ -209,6 +328,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				EA262B0813D2CB31006574FB /* PBXTargetDependency */,
 			);
 			name = AnyMap;
 			productName = AnyMap;
@@ -230,6 +350,12 @@
 			mainGroup = EA6DDC4813D2C2CF0054A79B;
 			productRefGroup = EA6DDC5413D2C2CF0054A79B /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = EA262AFF13D2CB24006574FB /* Products */;
+					ProjectRef = EA262AFE13D2CB24006574FB /* Proj4.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				EA6DDC5213D2C2CF0054A79B /* AnyMap */,
@@ -237,6 +363,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		EA262B0613D2CB25006574FB /* libProj4.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libProj4.a;
+			remoteRef = EA262B0513D2CB25006574FB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		EA262ACC13D2C692006574FB /* Resources */ = {
@@ -266,6 +402,11 @@
 			files = (
 				EA262ADB13D2C692006574FB /* main.m in Sources */,
 				EA262AE913D2C811006574FB /* SampleTest.m in Sources */,
+				EA262B2313D2CE2F006574FB /* EPSG3785Test.m in Sources */,
+				EA262B3013D2D09C006574FB /* EPSG3785.m in Sources */,
+				EA262B3413D2D1CA006574FB /* JSWgsPoint.m in Sources */,
+				EA262B3513D2D1DA006574FB /* JSMapPos.m in Sources */,
+				EA262B3613D2D1E6006574FB /* JSBaseProjection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,10 +418,22 @@
 				EA6DDC6813D2C2CF0054A79B /* AnyMapAppDelegate.m in Sources */,
 				EA6DDC6C13D2C2CF0054A79B /* AnyMapAppDelegate_iPhone.m in Sources */,
 				EA6DDC7313D2C2CF0054A79B /* AnyMapAppDelegate_iPad.m in Sources */,
+				EA262B1D13D2CDE6006574FB /* EPSG3785.m in Sources */,
+				EA262B1E13D2CDE6006574FB /* JSBaseProjection.m in Sources */,
+				EA262B2713D2CEC3006574FB /* JSMapPos.m in Sources */,
+				EA262B2A13D2CF27006574FB /* JSWgsPoint.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EA262B0813D2CB31006574FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Proj4;
+			targetProxy = EA262B0713D2CB31006574FB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		EA262AD613D2C692006574FB /* InfoPlist.strings */ = {
@@ -332,6 +485,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UnitTests/UnitTests-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Proj4";
 				INFOPLIST_FILE = "UnitTests/UnitTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_LDFLAGS = (
@@ -357,6 +511,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UnitTests/UnitTests-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Proj4";
 				INFOPLIST_FILE = "UnitTests/UnitTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_LDFLAGS = (
@@ -412,6 +567,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AnyMap/AnyMap-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Proj4";
 				INFOPLIST_FILE = "AnyMap/AnyMap-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -426,6 +582,7 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AnyMap/AnyMap-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Proj4";
 				INFOPLIST_FILE = "AnyMap/AnyMap-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";

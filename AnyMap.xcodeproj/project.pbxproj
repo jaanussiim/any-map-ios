@@ -1,0 +1,307 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EA6DDC5813D2C2CF0054A79B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6DDC5713D2C2CF0054A79B /* UIKit.framework */; };
+		EA6DDC5A13D2C2CF0054A79B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6DDC5913D2C2CF0054A79B /* Foundation.framework */; };
+		EA6DDC5C13D2C2CF0054A79B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6DDC5B13D2C2CF0054A79B /* CoreGraphics.framework */; };
+		EA6DDC6213D2C2CF0054A79B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA6DDC6013D2C2CF0054A79B /* InfoPlist.strings */; };
+		EA6DDC6513D2C2CF0054A79B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6DDC6413D2C2CF0054A79B /* main.m */; };
+		EA6DDC6813D2C2CF0054A79B /* AnyMapAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6DDC6713D2C2CF0054A79B /* AnyMapAppDelegate.m */; };
+		EA6DDC6C13D2C2CF0054A79B /* AnyMapAppDelegate_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6DDC6B13D2C2CF0054A79B /* AnyMapAppDelegate_iPhone.m */; };
+		EA6DDC6F13D2C2CF0054A79B /* MainWindow_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA6DDC6D13D2C2CF0054A79B /* MainWindow_iPhone.xib */; };
+		EA6DDC7313D2C2CF0054A79B /* AnyMapAppDelegate_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6DDC7213D2C2CF0054A79B /* AnyMapAppDelegate_iPad.m */; };
+		EA6DDC7613D2C2CF0054A79B /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA6DDC7413D2C2CF0054A79B /* MainWindow_iPad.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EA6DDC5313D2C2CF0054A79B /* AnyMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnyMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA6DDC5713D2C2CF0054A79B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EA6DDC5913D2C2CF0054A79B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EA6DDC5B13D2C2CF0054A79B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EA6DDC5F13D2C2CF0054A79B /* AnyMap-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AnyMap-Info.plist"; sourceTree = "<group>"; };
+		EA6DDC6113D2C2CF0054A79B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EA6DDC6313D2C2CF0054A79B /* AnyMap-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AnyMap-Prefix.pch"; sourceTree = "<group>"; };
+		EA6DDC6413D2C2CF0054A79B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EA6DDC6613D2C2CF0054A79B /* AnyMapAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnyMapAppDelegate.h; sourceTree = "<group>"; };
+		EA6DDC6713D2C2CF0054A79B /* AnyMapAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnyMapAppDelegate.m; sourceTree = "<group>"; };
+		EA6DDC6A13D2C2CF0054A79B /* AnyMapAppDelegate_iPhone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AnyMapAppDelegate_iPhone.h; path = iPhone/AnyMapAppDelegate_iPhone.h; sourceTree = "<group>"; };
+		EA6DDC6B13D2C2CF0054A79B /* AnyMapAppDelegate_iPhone.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AnyMapAppDelegate_iPhone.m; path = iPhone/AnyMapAppDelegate_iPhone.m; sourceTree = "<group>"; };
+		EA6DDC6E13D2C2CF0054A79B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = iPhone/en.lproj/MainWindow_iPhone.xib; sourceTree = "<group>"; };
+		EA6DDC7113D2C2CF0054A79B /* AnyMapAppDelegate_iPad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AnyMapAppDelegate_iPad.h; path = iPad/AnyMapAppDelegate_iPad.h; sourceTree = "<group>"; };
+		EA6DDC7213D2C2CF0054A79B /* AnyMapAppDelegate_iPad.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AnyMapAppDelegate_iPad.m; path = iPad/AnyMapAppDelegate_iPad.m; sourceTree = "<group>"; };
+		EA6DDC7513D2C2CF0054A79B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = iPad/en.lproj/MainWindow_iPad.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EA6DDC5013D2C2CF0054A79B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA6DDC5813D2C2CF0054A79B /* UIKit.framework in Frameworks */,
+				EA6DDC5A13D2C2CF0054A79B /* Foundation.framework in Frameworks */,
+				EA6DDC5C13D2C2CF0054A79B /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EA6DDC4813D2C2CF0054A79B = {
+			isa = PBXGroup;
+			children = (
+				EA6DDC5D13D2C2CF0054A79B /* AnyMap */,
+				EA6DDC5613D2C2CF0054A79B /* Frameworks */,
+				EA6DDC5413D2C2CF0054A79B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EA6DDC5413D2C2CF0054A79B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA6DDC5313D2C2CF0054A79B /* AnyMap.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA6DDC5613D2C2CF0054A79B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA6DDC5713D2C2CF0054A79B /* UIKit.framework */,
+				EA6DDC5913D2C2CF0054A79B /* Foundation.framework */,
+				EA6DDC5B13D2C2CF0054A79B /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EA6DDC5D13D2C2CF0054A79B /* AnyMap */ = {
+			isa = PBXGroup;
+			children = (
+				EA6DDC6613D2C2CF0054A79B /* AnyMapAppDelegate.h */,
+				EA6DDC6713D2C2CF0054A79B /* AnyMapAppDelegate.m */,
+				EA6DDC6913D2C2CF0054A79B /* iPhone */,
+				EA6DDC7013D2C2CF0054A79B /* iPad */,
+				EA6DDC5E13D2C2CF0054A79B /* Supporting Files */,
+			);
+			path = AnyMap;
+			sourceTree = "<group>";
+		};
+		EA6DDC5E13D2C2CF0054A79B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA6DDC5F13D2C2CF0054A79B /* AnyMap-Info.plist */,
+				EA6DDC6013D2C2CF0054A79B /* InfoPlist.strings */,
+				EA6DDC6313D2C2CF0054A79B /* AnyMap-Prefix.pch */,
+				EA6DDC6413D2C2CF0054A79B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EA6DDC6913D2C2CF0054A79B /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				EA6DDC6A13D2C2CF0054A79B /* AnyMapAppDelegate_iPhone.h */,
+				EA6DDC6B13D2C2CF0054A79B /* AnyMapAppDelegate_iPhone.m */,
+				EA6DDC6D13D2C2CF0054A79B /* MainWindow_iPhone.xib */,
+			);
+			name = iPhone;
+			sourceTree = "<group>";
+		};
+		EA6DDC7013D2C2CF0054A79B /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				EA6DDC7113D2C2CF0054A79B /* AnyMapAppDelegate_iPad.h */,
+				EA6DDC7213D2C2CF0054A79B /* AnyMapAppDelegate_iPad.m */,
+				EA6DDC7413D2C2CF0054A79B /* MainWindow_iPad.xib */,
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EA6DDC5213D2C2CF0054A79B /* AnyMap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA6DDC7913D2C2CF0054A79B /* Build configuration list for PBXNativeTarget "AnyMap" */;
+			buildPhases = (
+				EA6DDC4F13D2C2CF0054A79B /* Sources */,
+				EA6DDC5013D2C2CF0054A79B /* Frameworks */,
+				EA6DDC5113D2C2CF0054A79B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AnyMap;
+			productName = AnyMap;
+			productReference = EA6DDC5313D2C2CF0054A79B /* AnyMap.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EA6DDC4A13D2C2CF0054A79B /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = EA6DDC4D13D2C2CF0054A79B /* Build configuration list for PBXProject "AnyMap" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EA6DDC4813D2C2CF0054A79B;
+			productRefGroup = EA6DDC5413D2C2CF0054A79B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EA6DDC5213D2C2CF0054A79B /* AnyMap */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EA6DDC5113D2C2CF0054A79B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA6DDC6213D2C2CF0054A79B /* InfoPlist.strings in Resources */,
+				EA6DDC6F13D2C2CF0054A79B /* MainWindow_iPhone.xib in Resources */,
+				EA6DDC7613D2C2CF0054A79B /* MainWindow_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EA6DDC4F13D2C2CF0054A79B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA6DDC6513D2C2CF0054A79B /* main.m in Sources */,
+				EA6DDC6813D2C2CF0054A79B /* AnyMapAppDelegate.m in Sources */,
+				EA6DDC6C13D2C2CF0054A79B /* AnyMapAppDelegate_iPhone.m in Sources */,
+				EA6DDC7313D2C2CF0054A79B /* AnyMapAppDelegate_iPad.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EA6DDC6013D2C2CF0054A79B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA6DDC6113D2C2CF0054A79B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EA6DDC6D13D2C2CF0054A79B /* MainWindow_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA6DDC6E13D2C2CF0054A79B /* en */,
+			);
+			name = MainWindow_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		EA6DDC7413D2C2CF0054A79B /* MainWindow_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA6DDC7513D2C2CF0054A79B /* en */,
+			);
+			name = MainWindow_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EA6DDC7713D2C2CF0054A79B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EA6DDC7813D2C2CF0054A79B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EA6DDC7A13D2C2CF0054A79B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AnyMap/AnyMap-Prefix.pch";
+				INFOPLIST_FILE = "AnyMap/AnyMap-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EA6DDC7B13D2C2CF0054A79B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AnyMap/AnyMap-Prefix.pch";
+				INFOPLIST_FILE = "AnyMap/AnyMap-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EA6DDC4D13D2C2CF0054A79B /* Build configuration list for PBXProject "AnyMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA6DDC7713D2C2CF0054A79B /* Debug */,
+				EA6DDC7813D2C2CF0054A79B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA6DDC7913D2C2CF0054A79B /* Build configuration list for PBXNativeTarget "AnyMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA6DDC7A13D2C2CF0054A79B /* Debug */,
+				EA6DDC7B13D2C2CF0054A79B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EA6DDC4A13D2C2CF0054A79B /* Project object */;
+}

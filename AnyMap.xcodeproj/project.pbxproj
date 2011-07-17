@@ -31,6 +31,12 @@
 		EA262B3B13D2D858006574FB /* SmallMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA262B3913D2D858006574FB /* SmallMapViewController.xib */; };
 		EA262B3F13D2D870006574FB /* LargeMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA262B3D13D2D870006574FB /* LargeMapViewController.m */; };
 		EA262B4013D2D870006574FB /* LargeMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA262B3E13D2D870006574FB /* LargeMapViewController.xib */; };
+		EA262BAB13D3093A006574FB /* JSMicrosoftMapTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6DDC7B13D2C2CF0054A7A8 /* JSMicrosoftMapTest.m */; };
+		EA262C1113D30B8B006574FB /* JSOpenStreetMap.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6DDC7B13D2C2CF0054A7B2 /* JSOpenStreetMap.m */; };
+		EA262C1213D30B94006574FB /* JSMicrosoftMap.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6DDC7B13D2C2CF0054A7A5 /* JSMicrosoftMap.m */; };
+		EA262C1313D30B9F006574FB /* JSMapTile.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6DDC7B13D2C2CF0054A7AF /* JSMapTile.m */; };
+		EA262C1413D30BAD006574FB /* JSBaseMap.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6DDC7B13D2C2CF0054A7A9 /* JSBaseMap.m */; };
+		EA262C3313D30BF5006574FB /* JSZoomRange.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6DDC7B13D2C2CF0054A7B5 /* JSZoomRange.m */; };
 		EA6DDC5813D2C2CF0054A79B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6DDC5713D2C2CF0054A79B /* UIKit.framework */; };
 		EA6DDC5A13D2C2CF0054A79B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6DDC5913D2C2CF0054A79B /* Foundation.framework */; };
 		EA6DDC5C13D2C2CF0054A79B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6DDC5B13D2C2CF0054A79B /* CoreGraphics.framework */; };
@@ -43,6 +49,13 @@
 		EA6DDC7613D2C2CF0054A79B /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA6DDC7413D2C2CF0054A79B /* MainWindow_iPad.xib */; };
 		EA6DDC7B13D2C2CF0054A79D /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6DDC7B13D2C2CF0054A79C /* MapViewController.m */; };
 		EA6DDC7B13D2C2CF0054A7A0 /* JSMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6DDC7B13D2C2CF0054A79F /* JSMapView.m */; };
+		EA6DDC7B13D2C2CF0054A7A3 /* JSMapTilesView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6DDC7B13D2C2CF0054A7A2 /* JSMapTilesView.m */; };
+		EA6DDC7B13D2C2CF0054A7A6 /* JSMicrosoftMap.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6DDC7B13D2C2CF0054A7A5 /* JSMicrosoftMap.m */; };
+		EA6DDC7B13D2C2CF0054A7AA /* JSBaseMap.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6DDC7B13D2C2CF0054A7A9 /* JSBaseMap.m */; };
+		EA6DDC7B13D2C2CF0054A7AE /* JSMapTileTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6DDC7B13D2C2CF0054A7AD /* JSMapTileTest.m */; };
+		EA6DDC7B13D2C2CF0054A7B0 /* JSMapTile.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6DDC7B13D2C2CF0054A7AF /* JSMapTile.m */; };
+		EA6DDC7B13D2C2CF0054A7B3 /* JSOpenStreetMap.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6DDC7B13D2C2CF0054A7B2 /* JSOpenStreetMap.m */; };
+		EA6DDC7B13D2C2CF0054A7B6 /* JSZoomRange.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6DDC7B13D2C2CF0054A7B5 /* JSZoomRange.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +123,21 @@
 		EA6DDC7B13D2C2CF0054A79E /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		EA6DDC7B13D2C2CF0054A79F /* JSMapView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSMapView.m; sourceTree = "<group>"; };
 		EA6DDC7B13D2C2CF0054A7A1 /* JSMapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSMapView.h; sourceTree = "<group>"; };
+		EA6DDC7B13D2C2CF0054A7A2 /* JSMapTilesView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSMapTilesView.m; sourceTree = "<group>"; };
+		EA6DDC7B13D2C2CF0054A7A4 /* JSMapTilesView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSMapTilesView.h; sourceTree = "<group>"; };
+		EA6DDC7B13D2C2CF0054A7A5 /* JSMicrosoftMap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSMicrosoftMap.m; sourceTree = "<group>"; };
+		EA6DDC7B13D2C2CF0054A7A7 /* JSMicrosoftMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSMicrosoftMap.h; sourceTree = "<group>"; };
+		EA6DDC7B13D2C2CF0054A7A8 /* JSMicrosoftMapTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSMicrosoftMapTest.m; sourceTree = "<group>"; };
+		EA6DDC7B13D2C2CF0054A7A9 /* JSBaseMap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSBaseMap.m; sourceTree = "<group>"; };
+		EA6DDC7B13D2C2CF0054A7AB /* JSBaseMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSBaseMap.h; sourceTree = "<group>"; };
+		EA6DDC7B13D2C2CF0054A7AC /* JSPixelMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSPixelMap.h; sourceTree = "<group>"; };
+		EA6DDC7B13D2C2CF0054A7AD /* JSMapTileTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSMapTileTest.m; sourceTree = "<group>"; };
+		EA6DDC7B13D2C2CF0054A7AF /* JSMapTile.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSMapTile.m; sourceTree = "<group>"; };
+		EA6DDC7B13D2C2CF0054A7B1 /* JSMapTile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSMapTile.h; sourceTree = "<group>"; };
+		EA6DDC7B13D2C2CF0054A7B2 /* JSOpenStreetMap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSOpenStreetMap.m; sourceTree = "<group>"; };
+		EA6DDC7B13D2C2CF0054A7B4 /* JSOpenStreetMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSOpenStreetMap.h; sourceTree = "<group>"; };
+		EA6DDC7B13D2C2CF0054A7B5 /* JSZoomRange.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSZoomRange.m; sourceTree = "<group>"; };
+		EA6DDC7B13D2C2CF0054A7B7 /* JSZoomRange.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSZoomRange.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +217,7 @@
 		EA262B1513D2CDE6006574FB /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				EA262B9513D3083B006574FB /* Maps */,
 				EA262B4C13D2D97A006574FB /* Views */,
 				EA262B2413D2CEB8006574FB /* Components */,
 				EA262B1F13D2CDEC006574FB /* Projections */,
@@ -200,6 +229,8 @@
 		EA262B1C13D2CDE6006574FB /* TestClasses */ = {
 			isa = PBXGroup;
 			children = (
+				EA262BC013D30A33006574FB /* Components */,
+				EA262BA013D308CD006574FB /* Maps */,
 				EA262B2013D2CE16006574FB /* Projections */,
 			);
 			path = TestClasses;
@@ -228,6 +259,10 @@
 		EA262B2413D2CEB8006574FB /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				EA6DDC7B13D2C2CF0054A7B7 /* JSZoomRange.h */,
+				EA6DDC7B13D2C2CF0054A7B5 /* JSZoomRange.m */,
+				EA6DDC7B13D2C2CF0054A7B1 /* JSMapTile.h */,
+				EA6DDC7B13D2C2CF0054A7AF /* JSMapTile.m */,
 				EA262B2513D2CEC3006574FB /* JSMapPos.h */,
 				EA262B2613D2CEC3006574FB /* JSMapPos.m */,
 				EA262B2813D2CF27006574FB /* JSWgsPoint.h */,
@@ -248,10 +283,42 @@
 		EA262B4C13D2D97A006574FB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EA6DDC7B13D2C2CF0054A7A4 /* JSMapTilesView.h */,
+				EA6DDC7B13D2C2CF0054A7A2 /* JSMapTilesView.m */,
 				EA6DDC7B13D2C2CF0054A7A1 /* JSMapView.h */,
 				EA6DDC7B13D2C2CF0054A79F /* JSMapView.m */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		EA262B9513D3083B006574FB /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				EA6DDC7B13D2C2CF0054A7B4 /* JSOpenStreetMap.h */,
+				EA6DDC7B13D2C2CF0054A7B2 /* JSOpenStreetMap.m */,
+				EA6DDC7B13D2C2CF0054A7AC /* JSPixelMap.h */,
+				EA6DDC7B13D2C2CF0054A7AB /* JSBaseMap.h */,
+				EA6DDC7B13D2C2CF0054A7A9 /* JSBaseMap.m */,
+				EA6DDC7B13D2C2CF0054A7A7 /* JSMicrosoftMap.h */,
+				EA6DDC7B13D2C2CF0054A7A5 /* JSMicrosoftMap.m */,
+			);
+			name = Maps;
+			sourceTree = "<group>";
+		};
+		EA262BA013D308CD006574FB /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				EA6DDC7B13D2C2CF0054A7A8 /* JSMicrosoftMapTest.m */,
+			);
+			name = Maps;
+			sourceTree = "<group>";
+		};
+		EA262BC013D30A33006574FB /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				EA6DDC7B13D2C2CF0054A7AD /* JSMapTileTest.m */,
+			);
+			name = Components;
 			sourceTree = "<group>";
 		};
 		EA6DDC4813D2C2CF0054A79B = {
@@ -451,6 +518,13 @@
 				EA262B3413D2D1CA006574FB /* JSWgsPoint.m in Sources */,
 				EA262B3513D2D1DA006574FB /* JSMapPos.m in Sources */,
 				EA262B3613D2D1E6006574FB /* JSBaseProjection.m in Sources */,
+				EA262BAB13D3093A006574FB /* JSMicrosoftMapTest.m in Sources */,
+				EA6DDC7B13D2C2CF0054A7AE /* JSMapTileTest.m in Sources */,
+				EA262C1113D30B8B006574FB /* JSOpenStreetMap.m in Sources */,
+				EA262C1213D30B94006574FB /* JSMicrosoftMap.m in Sources */,
+				EA262C1313D30B9F006574FB /* JSMapTile.m in Sources */,
+				EA262C1413D30BAD006574FB /* JSBaseMap.m in Sources */,
+				EA262C3313D30BF5006574FB /* JSZoomRange.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +544,12 @@
 				EA262B3F13D2D870006574FB /* LargeMapViewController.m in Sources */,
 				EA6DDC7B13D2C2CF0054A79D /* MapViewController.m in Sources */,
 				EA6DDC7B13D2C2CF0054A7A0 /* JSMapView.m in Sources */,
+				EA6DDC7B13D2C2CF0054A7A3 /* JSMapTilesView.m in Sources */,
+				EA6DDC7B13D2C2CF0054A7A6 /* JSMicrosoftMap.m in Sources */,
+				EA6DDC7B13D2C2CF0054A7AA /* JSBaseMap.m in Sources */,
+				EA6DDC7B13D2C2CF0054A7B0 /* JSMapTile.m in Sources */,
+				EA6DDC7B13D2C2CF0054A7B3 /* JSOpenStreetMap.m in Sources */,
+				EA6DDC7B13D2C2CF0054A7B6 /* JSZoomRange.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

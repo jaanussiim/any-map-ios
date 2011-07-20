@@ -129,7 +129,7 @@
     [tilesCache_ setObject:responseData forKey:[tile tileNetworkURL]];
     [tile setImageData:responseData];
     JSLog(@"did pull %d bytes for %@", [responseData length], tile);
-    [self setNeedsDisplayInRect:CGRectMake(tile.mapX, tile.mapY, 256, 256)];
+    [self setNeedsDisplayInRect:[tile locationOnMap]];
   }];
   [request setFailedBlock:^{
     JSMapTile *tile = ((JSTilePullRequest *)request).pulledTile;

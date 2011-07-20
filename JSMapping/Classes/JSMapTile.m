@@ -15,6 +15,7 @@
  */
 
 #import "JSMapTile.h"
+#import "JSZoomRange.h"
 
 @implementation JSMapTile
 
@@ -47,7 +48,8 @@
 }
 
 - (CGRect)locationOnMap {
-  return CGRectMake(mapX_, mapY_, tileSize_, tileSize_);
+  int zoomDiff = [map_ zoomRange].maxZoom - zoom_;
+  return CGRectMake(mapX_ * pow(2, zoomDiff), mapY_ * pow(2, zoomDiff), tileSize_ * pow(2, zoomDiff), tileSize_ * pow(2, zoomDiff));
 }
 
 - (NSURL *)tileNetworkURL {

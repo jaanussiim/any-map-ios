@@ -15,6 +15,10 @@
  */
 
 #import "JSMapView.h"
+#import "JSBaseMap.h"
+#import "JSBaseMap.h"
+#import "JSWgsPoint.h"
+#import "JSMapTilesView.h"
 
 @interface JSMapView (Private)
 
@@ -23,6 +27,10 @@
 @end
 
 @implementation JSMapView
+
+@synthesize mappingStarted = mappingStarted_;
+
+
 - (id)initWithFrame:(CGRect)frame {
   self = [super initWithFrame:frame];
 
@@ -42,8 +50,24 @@
   return self;
 }
 
+- (void)dealloc {
+  [mapTilesView_ release];
+  [super dealloc];
+}
+
 - (void)initializeView {
-  [self setBackgroundColor:[UIColor blueColor]];
+  mapTilesView_ = [[JSMapTilesView alloc] initWithFrame:self.bounds];
+  [mapTilesView_ setBackgroundColor:[UIColor lightGrayColor]];
+  [mapTilesView_ setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
+  [self addSubview:mapTilesView_];
+}
+
+- (void)setDisplayedMap:(JSBaseMap *)map {
+  [mapTilesView_ setDisplayedMap:map];
+}
+
+- (void)startWithLocation:(JSWgsPoint *)point zoomLevel:(int)zoom {
+
 }
 
 @end

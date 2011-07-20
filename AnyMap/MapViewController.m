@@ -15,9 +15,14 @@
  */
 
 #import "MapViewController.h"
+#import "JSMapView.h"
+#import "JSWgsPoint.h"
+#import "JSMicrosoftMap.h"
 
 
 @implementation MapViewController
+
+@synthesize mapView = mapView_;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -28,6 +33,7 @@
 }
 
 - (void)dealloc {
+  [mapView_ release];
   [super dealloc];
 }
 
@@ -47,12 +53,21 @@
 
 - (void)viewDidUnload {
   [super viewDidUnload];
-  // Release any retained subviews of the main view.
-  // e.g. self.myOutlet = nil;
+  [self setMapView:nil];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
   return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
+
+- (void)viewWillAppear:(BOOL)animated {
+  [super viewWillAppear:animated];
+
+  if (![mapView_ mappingStarted]) {
+    [mapView_ setDisplayedMap:[[[JSMicrosoftMap alloc] init] autorelease]];
+    [mapView_ startWithLocation:[JSWgsPoint wgsWithLon:26.716667 lat:58.383333] zoomLevel:13];
+  }
+}
+
 
 @end

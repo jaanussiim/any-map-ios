@@ -14,16 +14,19 @@
  * limitations under the License.
  */
 
-#import "JSProjection.h"
+#import <Foundation/Foundation.h>
 
-@class JSMapTile;
+@class JSBaseMap;
 @class JSZoomRange;
 
-@protocol JSPixelMap <JSProjection>
-@required
-- (NSString *)buildTilePath:(JSMapTile *)tile;
-- (CGRect)tileMapBoundsOnZoom:(int)zoomLevel;
-- (JSZoomRange *)zoomRange;
-- (CGSize)contentSize;
-- (int)levelsOfDetails;
+@interface JSMapTilesRenderer : UIView {
+ @private
+  JSZoomRange *zoomRange_;
+  NSMutableArray *zoomLevelScales_;
+  JSBaseMap *displayedMap_;
+  NSMutableDictionary *tilesCache_;
+}
+
+- (id)initWithMap:(JSBaseMap *)map;
+
 @end

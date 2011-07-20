@@ -16,8 +16,20 @@
 
 #import <Foundation/Foundation.h>
 
-@interface JSMapView : UIView {
+@class JSBaseMap;
+@class JSWgsPoint;
+@class JSMapTilesView;
 
+@interface JSMapView : UIView {
+ @private
+  BOOL mappingStarted_;
+  JSMapTilesView *mapTilesView_;
 }
+
+@property (nonatomic, readonly) BOOL mappingStarted;
+
+
+- (void)setDisplayedMap:(JSBaseMap *)map;
+- (void)startWithLocation:(JSWgsPoint *)point zoomLevel:(int)zoom;
 
 @end

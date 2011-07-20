@@ -63,4 +63,13 @@
   return CGRectMake(0, 0, edge, edge);
 }
 
+- (CGSize)contentSize {
+  return [self tileMapBoundsOnZoom:zoomRange_.maxZoom].size;
+}
+
+- (int)levelsOfDetails {
+  return zoomRange_.maxZoom - zoomRange_.minZoom;
+}
+
+
 @end

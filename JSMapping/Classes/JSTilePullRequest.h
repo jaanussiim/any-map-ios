@@ -14,16 +14,17 @@
  * limitations under the License.
  */
 
-#import "JSProjection.h"
+#import <Foundation/Foundation.h>
+
+#import "ASIHTTPRequest.h"
 
 @class JSMapTile;
-@class JSZoomRange;
 
-@protocol JSPixelMap <JSProjection>
-@required
-- (NSString *)buildTilePath:(JSMapTile *)tile;
-- (CGRect)tileMapBoundsOnZoom:(int)zoomLevel;
-- (JSZoomRange *)zoomRange;
-- (CGSize)contentSize;
-- (int)levelsOfDetails;
+@interface JSTilePullRequest : ASIHTTPRequest {
+ @private
+  JSMapTile *pulledTile_;
+}
+
+@property (nonatomic, retain) JSMapTile *pulledTile;
+
 @end

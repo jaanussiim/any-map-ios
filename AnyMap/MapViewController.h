@@ -16,9 +16,14 @@
 
 #import <Foundation/Foundation.h>
 
+@class JSMapView;
+
 
 @interface MapViewController : UIViewController {
-
+ @private
+  JSMapView *mapView_;
 }
+
+@property (nonatomic, retain) IBOutlet JSMapView *mapView;
 
 @end

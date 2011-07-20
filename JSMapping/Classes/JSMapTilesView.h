@@ -16,8 +16,15 @@
 
 #import <Foundation/Foundation.h>
 
-@interface JSMapTilesView : UIView {
+@class JSBaseMap;
+@class JSMapTilesRenderer;
 
+@interface JSMapTilesView : UIScrollView <UIScrollViewDelegate> {
+ @private
+  JSMapTilesRenderer *tilesRenderView_;
+  JSBaseMap *displayedMap_;
 }
+@property (nonatomic, retain) JSBaseMap *displayedMap;
+@property (nonatomic, retain) JSMapTilesRenderer *tilesRenderView;
 
 @end

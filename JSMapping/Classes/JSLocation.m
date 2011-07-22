@@ -14,18 +14,26 @@
  * limitations under the License.
  */
 
-#import <Foundation/Foundation.h>
+#import "JSLocation.h"
+#import "JSWgsPoint.h"
+#import "JSMapPos.h"
 
-@class JSMapView;
+@implementation JSLocation
 
+@synthesize wgsPoint = wgsPoint_;
+@synthesize mapPos = mapPos_;
 
-@interface MapViewController : UIViewController {
- @private
-  JSMapView *mapView_;
+- (void)dealloc {
+  [wgsPoint_ release];
+  [mapPos_ release];
+
+  [super dealloc];
 }
 
-@property (nonatomic, retain) IBOutlet JSMapView *mapView;
-
-- (IBAction)toggleGPSState:(id)sender;
++ (JSLocation *)locationWithCoreLocation:(CLLocation *)location {
+  JSLocation *result = [[[JSLocation alloc] init] autorelease];
+  [result setWgsPoint:[JSWgsPoint wgsPointWithCoordinate:location.coordinate]];
+  return result;
+}
 
 @end

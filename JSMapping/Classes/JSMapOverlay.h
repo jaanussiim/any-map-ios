@@ -16,27 +16,33 @@
 
 #import <Foundation/Foundation.h>
 
-@class JSBaseMap;
-@class JSMapTilesRenderer;
-@class JSWgsPoint;
-@class JSMapPos;
+@class JSLocation;
+@class JSMapOverlayMarker;
 @class JSMapView;
+@class JSWgsPoint;
 
-@interface JSMapTilesView : UIScrollView <UIScrollViewDelegate> {
+@interface JSMapOverlay : NSObject {
  @private
-  JSMapTilesRenderer *tilesRenderView_;
-  JSBaseMap *displayedMap_;
-  JSWgsPoint *startLocation_;
-  int startZoom_;
+  JSMapOverlayMarker *marker_;
+  NSArray *points_;
+  NSArray *locations_;
   JSMapView *mapView_;
 }
-@property (nonatomic, retain) JSBaseMap *displayedMap;
-@property (nonatomic, retain) JSMapTilesRenderer *tilesRenderView;
-@property (nonatomic, retain) JSWgsPoint *startLocation;
-@property (nonatomic, assign) int startZoom;
-@property (nonatomic, assign) JSMapView *mapView;
 
-- (void)start;
-- (JSMapPos *)pixelMapPosition:(JSWgsPoint *)point;
+@property (nonatomic, retain) NSArray *points;
+@property (nonatomic, retain) NSArray *locations;
+@property (nonatomic, retain) JSMapView *mapView;
+
+- (id)initWithMarker:(JSMapOverlayMarker *)marker;
+
+- (void)addPoint:(JSWgsPoint *)point;
+- (void)addLocation:(JSLocation *)location;
+
+- (void)clear;
+- (void)clear:(BOOL)refreshScreen;
+
+- (void)drawRect:(CGRect)viewRect mapViewLocation:(CGRect)mapViewLocation zoomScale:(CGFloat)zoomScale;
+
+- (void)recalculateLocations;
 
 @end

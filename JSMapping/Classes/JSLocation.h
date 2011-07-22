@@ -16,27 +16,18 @@
 
 #import <Foundation/Foundation.h>
 
-@class JSBaseMap;
-@class JSMapTilesRenderer;
 @class JSWgsPoint;
 @class JSMapPos;
-@class JSMapView;
 
-@interface JSMapTilesView : UIScrollView <UIScrollViewDelegate> {
+@interface JSLocation : NSObject {
  @private
-  JSMapTilesRenderer *tilesRenderView_;
-  JSBaseMap *displayedMap_;
-  JSWgsPoint *startLocation_;
-  int startZoom_;
-  JSMapView *mapView_;
+  JSWgsPoint *wgsPoint_;
+  JSMapPos *mapPos_;
 }
-@property (nonatomic, retain) JSBaseMap *displayedMap;
-@property (nonatomic, retain) JSMapTilesRenderer *tilesRenderView;
-@property (nonatomic, retain) JSWgsPoint *startLocation;
-@property (nonatomic, assign) int startZoom;
-@property (nonatomic, assign) JSMapView *mapView;
 
-- (void)start;
-- (JSMapPos *)pixelMapPosition:(JSWgsPoint *)point;
+@property (nonatomic, retain) JSWgsPoint *wgsPoint;
+@property (nonatomic, retain) JSMapPos *mapPos;
+
++ (JSLocation *)locationWithCoreLocation:(CLLocation *)location;
 
 @end

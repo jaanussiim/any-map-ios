@@ -16,20 +16,36 @@
 
 #import <Foundation/Foundation.h>
 
+#import "JSGPSConsumer.h"
+
 @class JSBaseMap;
 @class JSWgsPoint;
 @class JSMapTilesView;
+@class JSGPSHandler;
+@class JSMapOverlaysView;
+@class JSMapOverlay;
+@class JSMapPos;
 
-@interface JSMapView : UIView {
+@interface JSMapView : UIView <JSGPSConsumer> {
  @private
   BOOL mappingStarted_;
   JSMapTilesView *mapTilesView_;
+  JSGPSHandler *gpsHandler_;
+  JSMapOverlaysView *mapOverlaysView_;
+  JSMapOverlay *gpsOverlay_;
 }
 
 @property (nonatomic, readonly) BOOL mappingStarted;
 
-
 - (void)setDisplayedMap:(JSBaseMap *)map;
 - (void)startWithLocation:(JSWgsPoint *)point zoomLevel:(int)zoom;
+- (void)showGPSLocation;
+- (void)removeGPSLocation;
 
+- (CGRect)mapViewRect;
+- (JSMapPos *)pixelMapPosition:(JSWgsPoint *)point;
+
+- (void)redrawSubviews;
+
+- (CGFloat)zoomScale;
 @end

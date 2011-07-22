@@ -16,27 +16,21 @@
 
 #import <Foundation/Foundation.h>
 
-@class JSBaseMap;
-@class JSMapTilesRenderer;
-@class JSWgsPoint;
-@class JSMapPos;
+@class JSMapOverlay;
 @class JSMapView;
 
-@interface JSMapTilesView : UIScrollView <UIScrollViewDelegate> {
+@interface JSMapOverlaysView : UIView {
  @private
-  JSMapTilesRenderer *tilesRenderView_;
-  JSBaseMap *displayedMap_;
-  JSWgsPoint *startLocation_;
-  int startZoom_;
+  NSArray *overlays_;
   JSMapView *mapView_;
 }
-@property (nonatomic, retain) JSBaseMap *displayedMap;
-@property (nonatomic, retain) JSMapTilesRenderer *tilesRenderView;
-@property (nonatomic, retain) JSWgsPoint *startLocation;
-@property (nonatomic, assign) int startZoom;
+
+@property (nonatomic, retain) NSArray *overlays;
 @property (nonatomic, assign) JSMapView *mapView;
 
-- (void)start;
-- (JSMapPos *)pixelMapPosition:(JSWgsPoint *)point;
+- (void)addOverlay:(JSMapOverlay *)mapOverlay;
+- (void)removeOverlay:(JSMapOverlay *)mapOverlay;
+
+- (void)recalculateLocations;
 
 @end

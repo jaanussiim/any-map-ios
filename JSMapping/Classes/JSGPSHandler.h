@@ -16,16 +16,19 @@
 
 #import <Foundation/Foundation.h>
 
-@class JSMapView;
+@protocol JSGPSConsumer;
 
 
-@interface MapViewController : UIViewController {
+@interface JSGPSHandler : NSObject <CLLocationManagerDelegate> {
  @private
-  JSMapView *mapView_;
+  NSArray *listeners_;
+  CLLocationManager *locationManager_;
 }
 
-@property (nonatomic, retain) IBOutlet JSMapView *mapView;
+@property (nonatomic, retain) NSArray *listeners;
+@property (nonatomic, retain) CLLocationManager *locationManager;
 
-- (IBAction)toggleGPSState:(id)sender;
+- (void)addGPSConsumer:(id <JSGPSConsumer>)listener;
+- (void)removeGPSConsumer:(id <JSGPSConsumer>)listener;
 
 @end

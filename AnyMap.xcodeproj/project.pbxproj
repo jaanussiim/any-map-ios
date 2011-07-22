@@ -38,7 +38,6 @@
 		EA262C1413D30BAD006574FB /* JSBaseMap.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6DDC7B13D2C2CF0054A7A9 /* JSBaseMap.m */; };
 		EA262C3313D30BF5006574FB /* JSZoomRange.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6DDC7B13D2C2CF0054A7B5 /* JSZoomRange.m */; };
 		EA262C4713D34ADC006574FB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA262C4613D34ADC006574FB /* QuartzCore.framework */; };
-		EA28A56A13D4E7BA00050D12 /* downloading.png in Resources */ = {isa = PBXBuildFile; fileRef = EA28A56913D4E7BA00050D12 /* downloading.png */; };
 		EA38E03013D784F5007D9190 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = EA38E02013D784F5007D9190 /* ASIDataCompressor.m */; };
 		EA38E03113D784F5007D9190 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = EA38E02213D784F5007D9190 /* ASIDataDecompressor.m */; };
 		EA38E03213D784F5007D9190 /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = EA38E02413D784F5007D9190 /* ASIDownloadCache.m */; };
@@ -73,6 +72,15 @@
 		EA6DDC7B13D2C2CF0054A7B3 /* JSOpenStreetMap.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6DDC7B13D2C2CF0054A7B2 /* JSOpenStreetMap.m */; };
 		EA6DDC7B13D2C2CF0054A7B6 /* JSZoomRange.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6DDC7B13D2C2CF0054A7B5 /* JSZoomRange.m */; };
 		EA6DDC7B13D2C2CF0054A7B9 /* JSMapTilesRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6DDC7B13D2C2CF0054A7B8 /* JSMapTilesRenderer.m */; };
+		EAA7463A13D99B0800E2121C /* JSGPSHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA7463913D99B0800E2121C /* JSGPSHandler.m */; };
+		EAA7464013D99D2900E2121C /* gps_location@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAA7463E13D99D2900E2121C /* gps_location@2x.png */; };
+		EAA7464313D99D9600E2121C /* gps_location.png in Resources */ = {isa = PBXBuildFile; fileRef = EAA7464213D99D9600E2121C /* gps_location.png */; };
+		EAA7464613D99E1100E2121C /* 74-location.png in Resources */ = {isa = PBXBuildFile; fileRef = EAA7464413D99E1100E2121C /* 74-location.png */; };
+		EAA7464713D99E1100E2121C /* 74-location@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAA7464513D99E1100E2121C /* 74-location@2x.png */; };
+		EAA7466813D9A59800E2121C /* JSLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA7466713D9A59800E2121C /* JSLocation.m */; };
+		EAA7467613D9A80200E2121C /* JSMapOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA7467513D9A80200E2121C /* JSMapOverlay.m */; };
+		EAA7467913D9A81100E2121C /* JSMapOverlayMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA7467813D9A81100E2121C /* JSMapOverlayMarker.m */; };
+		EAA7467C13D9A8DF00E2121C /* JSMapOverlaysView.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA7467B13D9A8DF00E2121C /* JSMapOverlaysView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -187,6 +195,22 @@
 		EA6DDC7B13D2C2CF0054A7B7 /* JSZoomRange.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSZoomRange.h; sourceTree = "<group>"; };
 		EA6DDC7B13D2C2CF0054A7B8 /* JSMapTilesRenderer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSMapTilesRenderer.m; sourceTree = "<group>"; };
 		EA6DDC7B13D2C2CF0054A7BA /* JSMapTilesRenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSMapTilesRenderer.h; sourceTree = "<group>"; };
+		EAA7463813D99B0800E2121C /* JSGPSHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSGPSHandler.h; sourceTree = "<group>"; };
+		EAA7463913D99B0800E2121C /* JSGPSHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSGPSHandler.m; sourceTree = "<group>"; };
+		EAA7463B13D99B1800E2121C /* JSGPSConsumer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSGPSConsumer.h; sourceTree = "<group>"; };
+		EAA7463E13D99D2900E2121C /* gps_location@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gps_location@2x.png"; sourceTree = "<group>"; };
+		EAA7463F13D99D2900E2121C /* graphics_sources.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = graphics_sources.txt; sourceTree = "<group>"; };
+		EAA7464213D99D9600E2121C /* gps_location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gps_location.png; sourceTree = "<group>"; };
+		EAA7464413D99E1100E2121C /* 74-location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "74-location.png"; sourceTree = "<group>"; };
+		EAA7464513D99E1100E2121C /* 74-location@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "74-location@2x.png"; sourceTree = "<group>"; };
+		EAA7466613D9A59800E2121C /* JSLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSLocation.h; sourceTree = "<group>"; };
+		EAA7466713D9A59800E2121C /* JSLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSLocation.m; sourceTree = "<group>"; };
+		EAA7467413D9A80200E2121C /* JSMapOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSMapOverlay.h; sourceTree = "<group>"; };
+		EAA7467513D9A80200E2121C /* JSMapOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSMapOverlay.m; sourceTree = "<group>"; };
+		EAA7467713D9A81100E2121C /* JSMapOverlayMarker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSMapOverlayMarker.h; sourceTree = "<group>"; };
+		EAA7467813D9A81100E2121C /* JSMapOverlayMarker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSMapOverlayMarker.m; sourceTree = "<group>"; };
+		EAA7467A13D9A8DF00E2121C /* JSMapOverlaysView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSMapOverlaysView.h; sourceTree = "<group>"; };
+		EAA7467B13D9A8DF00E2121C /* JSMapOverlaysView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSMapOverlaysView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,6 +296,8 @@
 		EA262B1513D2CDE6006574FB /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				EAA7467313D9A7EC00E2121C /* Overlays */,
+				EAA7463713D99AE400E2121C /* GPS */,
 				EA38E05913D78884007D9190 /* Network */,
 				EA262B9513D3083B006574FB /* Maps */,
 				EA262B4C13D2D97A006574FB /* Views */,
@@ -323,6 +349,8 @@
 				EA262B2613D2CEC3006574FB /* JSMapPos.m */,
 				EA262B2813D2CF27006574FB /* JSWgsPoint.h */,
 				EA262B2913D2CF27006574FB /* JSWgsPoint.m */,
+				EAA7466613D9A59800E2121C /* JSLocation.h */,
+				EAA7466713D9A59800E2121C /* JSLocation.m */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -345,6 +373,8 @@
 				EA6DDC7B13D2C2CF0054A7A2 /* JSMapTilesView.m */,
 				EA6DDC7B13D2C2CF0054A7A1 /* JSMapView.h */,
 				EA6DDC7B13D2C2CF0054A79F /* JSMapView.m */,
+				EAA7467A13D9A8DF00E2121C /* JSMapOverlaysView.h */,
+				EAA7467B13D9A8DF00E2121C /* JSMapOverlaysView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -470,6 +500,7 @@
 		EA6DDC5D13D2C2CF0054A79B /* AnyMap */ = {
 			isa = PBXGroup;
 			children = (
+				EAA7463D13D99D2900E2121C /* graphics */,
 				EA262B4113D2D8F2006574FB /* Shared */,
 				EA6DDC6613D2C2CF0054A79B /* AnyMapAppDelegate.h */,
 				EA6DDC6713D2C2CF0054A79B /* AnyMapAppDelegate.m */,
@@ -515,6 +546,39 @@
 				EA262B3E13D2D870006574FB /* LargeMapViewController.xib */,
 			);
 			name = iPad;
+			sourceTree = "<group>";
+		};
+		EAA7463713D99AE400E2121C /* GPS */ = {
+			isa = PBXGroup;
+			children = (
+				EAA7463813D99B0800E2121C /* JSGPSHandler.h */,
+				EAA7463913D99B0800E2121C /* JSGPSHandler.m */,
+				EAA7463B13D99B1800E2121C /* JSGPSConsumer.h */,
+			);
+			name = GPS;
+			sourceTree = "<group>";
+		};
+		EAA7463D13D99D2900E2121C /* graphics */ = {
+			isa = PBXGroup;
+			children = (
+				EAA7464413D99E1100E2121C /* 74-location.png */,
+				EAA7464513D99E1100E2121C /* 74-location@2x.png */,
+				EAA7464213D99D9600E2121C /* gps_location.png */,
+				EAA7463E13D99D2900E2121C /* gps_location@2x.png */,
+				EAA7463F13D99D2900E2121C /* graphics_sources.txt */,
+			);
+			path = graphics;
+			sourceTree = "<group>";
+		};
+		EAA7467313D9A7EC00E2121C /* Overlays */ = {
+			isa = PBXGroup;
+			children = (
+				EAA7467413D9A80200E2121C /* JSMapOverlay.h */,
+				EAA7467513D9A80200E2121C /* JSMapOverlay.m */,
+				EAA7467713D9A81100E2121C /* JSMapOverlayMarker.h */,
+				EAA7467813D9A81100E2121C /* JSMapOverlayMarker.m */,
+			);
+			name = Overlays;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -612,7 +676,10 @@
 				EA6DDC7613D2C2CF0054A79B /* MainWindow_iPad.xib in Resources */,
 				EA262B3B13D2D858006574FB /* SmallMapViewController.xib in Resources */,
 				EA262B4013D2D870006574FB /* LargeMapViewController.xib in Resources */,
-				EA28A56A13D4E7BA00050D12 /* downloading.png in Resources */,
+				EAA7464013D99D2900E2121C /* gps_location@2x.png in Resources */,
+				EAA7464313D99D9600E2121C /* gps_location.png in Resources */,
+				EAA7464613D99E1100E2121C /* 74-location.png in Resources */,
+				EAA7464713D99E1100E2121C /* 74-location@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -673,6 +740,11 @@
 				EA38E03913D78508007D9190 /* ASIAuthenticationDialog.m in Sources */,
 				EA38E03C13D78517007D9190 /* Reachability.m in Sources */,
 				EA38E05C13D788A1007D9190 /* JSTilePullRequest.m in Sources */,
+				EAA7463A13D99B0800E2121C /* JSGPSHandler.m in Sources */,
+				EAA7466813D9A59800E2121C /* JSLocation.m in Sources */,
+				EAA7467613D9A80200E2121C /* JSMapOverlay.m in Sources */,
+				EAA7467913D9A81100E2121C /* JSMapOverlayMarker.m in Sources */,
+				EAA7467C13D9A8DF00E2121C /* JSMapOverlaysView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

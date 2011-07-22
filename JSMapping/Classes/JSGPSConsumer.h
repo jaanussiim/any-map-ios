@@ -16,16 +16,9 @@
 
 #import <Foundation/Foundation.h>
 
-@class JSMapView;
+@class JSLocation;
 
-
-@interface MapViewController : UIViewController {
- @private
-  JSMapView *mapView_;
-}
-
-@property (nonatomic, retain) IBOutlet JSMapView *mapView;
-
-- (IBAction)toggleGPSState:(id)sender;
-
+@protocol JSGPSConsumer <NSObject>
+@required
+- (void)didUpdateToLocation:(JSLocation *)location;
 @end

@@ -16,16 +16,18 @@
 
 #import <Foundation/Foundation.h>
 
-@class JSMapView;
 
-
-@interface MapViewController : UIViewController {
+@interface JSMapOverlayMarker : NSObject {
  @private
-  JSMapView *mapView_;
+  UIImage *markerImage_;
+  CGPoint anchorPoint_;
+  CGSize markerSize_;
 }
 
-@property (nonatomic, retain) IBOutlet JSMapView *mapView;
+@property (nonatomic, readonly) CGPoint anchorPoint;
+@property (nonatomic, readonly) CGSize markerSize;
+@property (nonatomic, readonly) UIImage *markerImage;
 
-- (IBAction)toggleGPSState:(id)sender;
+- (id)initWithImage:(UIImage *)image anchorPoint:(CGPoint)anchorPoint;
 
 @end

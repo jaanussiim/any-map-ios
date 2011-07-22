@@ -21,6 +21,9 @@
 #import "JSWgsPoint.h"
 #import "JSZoomRange.h"
 #import "JSMapPos.h"
+#import "JSMapPos.h"
+#import "JSLocation.h"
+#import "JSMapView.h"
 
 @interface JSMapTilesView (Private)
 
@@ -34,6 +37,7 @@
 @synthesize tilesRenderView = tilesRenderView_;
 @synthesize startLocation = startLocation_;
 @synthesize startZoom = startZoom_;
+@synthesize mapView = mapView_;
 
 
 - (id)initWithFrame:(CGRect)frame {
@@ -67,6 +71,7 @@
   [self setShowsVerticalScrollIndicator:FALSE];
   [self setBouncesZoom:TRUE];
   [self setDecelerationRate:UIScrollViewDecelerationRateFast];
+  [self setScrollsToTop:FALSE];
 }
 
 - (void)layoutSubviews {
@@ -109,6 +114,10 @@
   JSLog(@"scrollViewDidZoom:%f", scrollView.zoomScale);
 }
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+  [mapView_ redrawSubviews];
+}
+
 - (void)start {
   JSMapTilesRenderer *renderer = [[JSMapTilesRenderer alloc] initWithMap:displayedMap_];
   CGSize size = renderer.frame.size;
@@ -125,9 +134,13 @@
   double startScale = 1 / pow(2, displayedMap_.zoomRange.maxZoom - startZoom_);
   JSLog(@"startScale:%f", startScale);
   [self setContentOffset:CGPointMake(startPos.x, startPos.y)];
-
+  JSLog(@"offsetBefore:%@", NSStringFromCGPoint(self.contentOffset));
   [self addSubview:renderer];
   [self setZoomScale:startScale];
+  JSLog(@"offsetAfter:%@", NSStringFromCGPoint(self.contentOffset));
 }
 
+- (JSMapPos *)pixelMapPosition:(JSWgsPoint *)point {
+  return [displayedMap_ wgsToMapPos:point zoomLevel:displayedMap_.zoomRange.maxZoom];
+}
 @end

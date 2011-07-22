@@ -24,6 +24,7 @@
 
 @synthesize mapView = mapView_;
 
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
   if (self) {
@@ -66,6 +67,17 @@
   if (![mapView_ mappingStarted]) {
     [mapView_ setDisplayedMap:[[[JSMicrosoftMap alloc] init] autorelease]];
     [mapView_ startWithLocation:[JSWgsPoint wgsWithLon:26.716667 lat:58.383333] zoomLevel:13];
+  }
+}
+
+- (IBAction)toggleGPSState:(id)sender {
+  UIBarButtonItem *button = (UIBarButtonItem *)sender;
+  [button setStyle:(button.style == UIBarButtonItemStyleDone ? UIBarButtonItemStyleBordered : UIBarButtonItemStyleDone)];
+
+  if (button.style == UIBarButtonItemStyleDone) {
+    [mapView_ showGPSLocation];
+  } else {
+    [mapView_ removeGPSLocation];
   }
 }
 

@@ -14,18 +14,31 @@
  * limitations under the License.
  */
 
-#import <Foundation/Foundation.h>
-
-@class JSMapView;
+#import "JSMapOverlayMarker.h"
 
 
-@interface MapViewController : UIViewController {
- @private
-  JSMapView *mapView_;
+@implementation JSMapOverlayMarker
+
+@synthesize anchorPoint = anchorPoint_;
+@synthesize markerSize = markerSize_;
+@synthesize markerImage = markerImage_;
+
+- (id)initWithImage:(UIImage *)image anchorPoint:(CGPoint)anchorPoint {
+  self = [super init];
+
+  if (self != nil) {
+    markerImage_ = [image retain];
+    anchorPoint_ = anchorPoint;
+    markerSize_ = markerImage_.size;
+  }
+
+  return self;
 }
 
-@property (nonatomic, retain) IBOutlet JSMapView *mapView;
+- (void)dealloc {
+  [markerImage_ release];
 
-- (IBAction)toggleGPSState:(id)sender;
+  [super dealloc];
+}
 
 @end

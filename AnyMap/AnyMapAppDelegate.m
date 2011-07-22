@@ -15,12 +15,16 @@
  */
 
 #import "AnyMapAppDelegate.h"
+#import "ASIHTTPRequest.h"
+#import "ASIDownloadCache.h"
 
 @implementation AnyMapAppDelegate
 
 @synthesize window = _window;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  [ASIHTTPRequest setDefaultCache:[ASIDownloadCache sharedCache]];
+
   UIViewController *controller = [self createMainViewController];
 
   [self.window setRootViewController:controller];

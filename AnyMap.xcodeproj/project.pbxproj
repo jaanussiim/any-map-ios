@@ -296,6 +296,7 @@
 		EA262B1513D2CDE6006574FB /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				EAA7467D13DA2C5E00E2121C /* Extensions */,
 				EAA7467313D9A7EC00E2121C /* Overlays */,
 				EAA7463713D99AE400E2121C /* GPS */,
 				EA38E05913D78884007D9190 /* Network */,
@@ -579,6 +580,13 @@
 				EAA7467813D9A81100E2121C /* JSMapOverlayMarker.m */,
 			);
 			name = Overlays;
+			sourceTree = "<group>";
+		};
+		EAA7467D13DA2C5E00E2121C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

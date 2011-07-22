@@ -24,7 +24,6 @@
   JSZoomRange *zoomRange_;
   NSMutableArray *zoomLevelScales_;
   JSBaseMap *displayedMap_;
-  NSMutableDictionary *tilesCache_;
 }
 
 - (id)initWithMap:(JSBaseMap *)map;

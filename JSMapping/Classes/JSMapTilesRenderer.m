@@ -21,6 +21,7 @@
 #import "JSZoomRange.h"
 #import "JSMapTile.h"
 #import "JSTilePullRequest.h"
+#import "ASIDownloadCache.h"
 
 @interface JSMapTilesRenderer (Private)
 
@@ -51,7 +52,6 @@
     for (int i = 0; i < levelOfDetails; i++) {
       [zoomLevelScales_ addObject:[NSNumber numberWithFloat:(1 / pow(2, i))]];
     }
-    tilesCache_ = [[NSMutableDictionary alloc] init];
     [self setOpaque:FALSE];
   }
 
@@ -62,7 +62,6 @@
   [zoomRange_ release];
   [zoomLevelScales_ release];
   [displayedMap_ release];
-  [tilesCache_ release];
   [super dealloc];
 }
 
@@ -115,8 +114,10 @@
   JSMapTile *tile = [JSMapTile mapTileWithTileSize:256 mapX:col * 256 mapY:row * 256 zoom:mapZoomLevel map:displayedMap_];
   JSLog(@"tilePath: %@", [tile tileNetworkURL]);
 
-  NSData *imageData = [tilesCache_ objectForKey:[tile tileNetworkURL]];
+  //TODO jaanus: this is a hack
+  NSData *imageData = [[ASIDownloadCache sharedCache] cachedResponseDataForURL:[tile tileNetworkURL]];
   if (imageData != nil) {
+    JSLog(@"data from cache");
     return [UIImage imageWithData:imageData];
   }
 
@@ -127,7 +128,6 @@
   [request setCompletionBlock:^{
     NSData *responseData = [request responseData];
     JSMapTile *tile = ((JSTilePullRequest *)request).pulledTile;
-    [tilesCache_ setObject:responseData forKey:[tile tileNetworkURL]];
     [tile setImageData:responseData];
     JSLog(@"did pull %d bytes for %@", [responseData length], tile);
     [self setNeedsDisplayInRect:[tile locationOnMap]];

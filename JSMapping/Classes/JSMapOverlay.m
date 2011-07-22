@@ -90,6 +90,9 @@
 - (void)clear:(BOOL)refreshScreen {
   [self setPoints:[NSArray array]];
   [self setLocations:[NSArray array]];
+  if (refreshScreen) {
+    [mapView_ redrawSubviews];
+  }
 }
 
 - (void)recalculateLocations {

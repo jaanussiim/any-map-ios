@@ -121,7 +121,6 @@
 - (void)start {
   JSMapTilesRenderer *renderer = [[JSMapTilesRenderer alloc] initWithMap:displayedMap_];
   CGSize size = renderer.frame.size;
-  JSLog(@"map size: %@", NSStringFromCGSize(size));
   [self setContentSize:size];
   CGFloat ratio = self.frame.size.height / size.height;
   [self setMaximumZoomScale:1];
@@ -132,15 +131,18 @@
 
   JSMapPos *startPos = [displayedMap_ wgsToMapPos:startLocation_ zoomLevel:[displayedMap_ zoomRange].maxZoom];
   double startScale = 1 / pow(2, displayedMap_.zoomRange.maxZoom - startZoom_);
-  JSLog(@"startScale:%f", startScale);
   [self setContentOffset:CGPointMake(startPos.x, startPos.y)];
-  JSLog(@"offsetBefore:%@", NSStringFromCGPoint(self.contentOffset));
   [self addSubview:renderer];
   [self setZoomScale:startScale];
-  JSLog(@"offsetAfter:%@", NSStringFromCGPoint(self.contentOffset));
 }
 
 - (JSMapPos *)pixelMapPosition:(JSWgsPoint *)point {
   return [displayedMap_ wgsToMapPos:point zoomLevel:displayedMap_.zoomRange.maxZoom];
+}
+
+- (void)moveToWgsPoint:(JSWgsPoint *)point {
+  JSMapPos *mapPos = [displayedMap_ wgsToMapPos:point zoomLevel:displayedMap_.zoomRange.maxZoom];
+  CGPoint offset = CGPointMake(mapPos.x * self.zoomScale - self.frame.size.width / 2, mapPos.y * self.zoomScale - self.frame.size.height / 2);
+  [self setContentOffset:offset animated:TRUE];
 }
 @end

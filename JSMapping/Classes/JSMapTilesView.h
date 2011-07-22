@@ -39,4 +39,5 @@
 - (void)start;
 - (JSMapPos *)pixelMapPosition:(JSWgsPoint *)point;
 
+- (void)moveToWgsPoint:(JSWgsPoint *)point;
 @end

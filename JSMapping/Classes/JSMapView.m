@@ -112,12 +112,13 @@
 
 - (void)removeGPSLocation {
   [gpsHandler_ removeGPSConsumer:self];
+  [gpsOverlay_ clear];
 }
 
 - (void)didUpdateToLocation:(JSLocation *)location {
   [gpsOverlay_ clear:FALSE];
   [gpsOverlay_ addLocation:location];
-  //[mapTilesView_ moveToWgsPoint:location.wgsPoint];
+  [mapTilesView_ moveToWgsPoint:location.wgsPoint];
   [mapOverlaysView_ setNeedsDisplay];
 }
 

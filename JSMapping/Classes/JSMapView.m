@@ -67,7 +67,13 @@
 }
 
 - (void)startWithLocation:(JSWgsPoint *)point zoomLevel:(int)zoom {
+  if (mappingStarted_) {
+    return;
+  }
 
+  [mapTilesView_ setStartLocation:point];
+  [mapTilesView_ setStartZoom:zoom];
+  [mapTilesView_ start];
 }
 
 @end

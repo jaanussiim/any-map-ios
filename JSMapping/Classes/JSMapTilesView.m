@@ -18,6 +18,9 @@
 #import "JSBaseMap.h"
 #import "JSMapTilesRenderer.h"
 #import "Constants.h"
+#import "JSWgsPoint.h"
+#import "JSZoomRange.h"
+#import "JSMapPos.h"
 
 @interface JSMapTilesView (Private)
 
@@ -29,6 +32,8 @@
 
 @synthesize displayedMap = displayedMap_;
 @synthesize tilesRenderView = tilesRenderView_;
+@synthesize startLocation = startLocation_;
+@synthesize startZoom = startZoom_;
 
 
 - (id)initWithFrame:(CGRect)frame {
@@ -52,6 +57,7 @@
 - (void)dealloc {
   [displayedMap_ release];
   [tilesRenderView_ release];
+  [startLocation_ release];
   [super dealloc];
 }
 
@@ -95,29 +101,33 @@
   }
 }
 
-- (void)setDisplayedMap:(JSBaseMap *)map {
-  [displayedMap_ autorelease];
-  displayedMap_ = [map retain];
-
-  JSMapTilesRenderer *renderer = [[JSMapTilesRenderer alloc] initWithMap:displayedMap_];
-  [self addSubview:renderer];
-  [self setTilesRenderView:renderer];
-  [renderer release];
-  [self setContentSize:renderer.frame.size];
-
-  CGSize size = [map contentSize];
-  JSLog(@"map size: %@", NSStringFromCGSize(size));
-  CGFloat ratio = self.frame.size.height / size.height;
-  [self setMaximumZoomScale:1];
-  [self setMinimumZoomScale:ratio];
-}
-
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
   return tilesRenderView_;
 }
 
 - (void)scrollViewDidZoom:(UIScrollView *)scrollView {
   JSLog(@"scrollViewDidZoom:%f", scrollView.zoomScale);
+}
+
+- (void)start {
+  JSMapTilesRenderer *renderer = [[JSMapTilesRenderer alloc] initWithMap:displayedMap_];
+  CGSize size = renderer.frame.size;
+  JSLog(@"map size: %@", NSStringFromCGSize(size));
+  [self setContentSize:size];
+  CGFloat ratio = self.frame.size.height / size.height;
+  [self setMaximumZoomScale:1];
+  [self setMinimumZoomScale:ratio];
+  [self setTilesRenderView:renderer];
+  [renderer release];
+
+
+  JSMapPos *startPos = [displayedMap_ wgsToMapPos:startLocation_ zoomLevel:[displayedMap_ zoomRange].maxZoom];
+  double startScale = 1 / pow(2, displayedMap_.zoomRange.maxZoom - startZoom_);
+  JSLog(@"startScale:%f", startScale);
+  [self setContentOffset:CGPointMake(startPos.x, startPos.y)];
+
+  [self addSubview:renderer];
+  [self setZoomScale:startScale];
 }
 
 @end

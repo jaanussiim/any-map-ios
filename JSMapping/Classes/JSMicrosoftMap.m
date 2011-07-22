@@ -22,7 +22,7 @@
 @implementation JSMicrosoftMap
 
 - (id)init {
-  self = [super initWithProjection:[[[EPSG3785 alloc] initWithTileSize:256] autorelease] minZoom:1 maxZoom:3];
+  self = [super initWithProjection:[[[EPSG3785 alloc] initWithTileSize:256] autorelease] minZoom:1 maxZoom:17];
 
   if (self) {
 

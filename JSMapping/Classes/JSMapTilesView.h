@@ -18,13 +18,20 @@
 
 @class JSBaseMap;
 @class JSMapTilesRenderer;
+@class JSWgsPoint;
 
 @interface JSMapTilesView : UIScrollView <UIScrollViewDelegate> {
  @private
   JSMapTilesRenderer *tilesRenderView_;
   JSBaseMap *displayedMap_;
+  JSWgsPoint *startLocation_;
+  int startZoom_;
 }
 @property (nonatomic, retain) JSBaseMap *displayedMap;
 @property (nonatomic, retain) JSMapTilesRenderer *tilesRenderView;
+@property (nonatomic, retain) JSWgsPoint *startLocation;
+@property (nonatomic, assign) int startZoom;
+
+- (void)start;
 
 @end

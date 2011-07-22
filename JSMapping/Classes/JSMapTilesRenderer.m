@@ -52,6 +52,7 @@
       [zoomLevelScales_ addObject:[NSNumber numberWithFloat:(1 / pow(2, i))]];
     }
     tilesCache_ = [[NSMutableDictionary alloc] init];
+    [self setOpaque:FALSE];
   }
 
   return self;
@@ -137,7 +138,7 @@
   }];
   [request startAsynchronous];
 
-  return [UIImage imageNamed:@"downloading.png"];
+  return nil;
 }
 
 - (int)zoomLevelForScale:(CGFloat)scale {

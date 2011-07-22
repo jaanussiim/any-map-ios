@@ -53,6 +53,8 @@
       [zoomLevelScales_ addObject:[NSNumber numberWithFloat:(1 / pow(2, i))]];
     }
     [self setOpaque:FALSE];
+    operationQueue_ = [[NSOperationQueue alloc] init];
+    [operationQueue_ setMaxConcurrentOperationCount:3];
   }
 
   return self;
@@ -62,11 +64,11 @@
   [zoomRange_ release];
   [zoomLevelScales_ release];
   [displayedMap_ release];
+  [operationQueue_ release];
   [super dealloc];
 }
 
 - (void)drawRect:(CGRect)rect {
-  JSLog(@"drawRect:%@", NSStringFromCGRect(rect));
   CGContextRef context = UIGraphicsGetCurrentContext();
   CGFloat scale = CGContextGetCTM(context).a;
 
@@ -105,19 +107,12 @@
 }
 
 - (UIImage *)tileForScale:(CGFloat)scale row:(int)row col:(int)col {
-  JSLog(@"Tile for scale:%f row:%d col:%d", scale, row, col);
-
   int mapZoomLevel = [self zoomLevelForScale:scale];
-
-  JSLog(@"map tile data - zoom:%d", mapZoomLevel);
-
   JSMapTile *tile = [JSMapTile mapTileWithTileSize:256 mapX:col * 256 mapY:row * 256 zoom:mapZoomLevel map:displayedMap_];
-  JSLog(@"tilePath: %@", [tile tileNetworkURL]);
 
   //TODO jaanus: this is a hack
   NSData *imageData = [[ASIDownloadCache sharedCache] cachedResponseDataForURL:[tile tileNetworkURL]];
   if (imageData != nil) {
-    JSLog(@"data from cache");
     return [UIImage imageWithData:imageData];
   }
 
@@ -129,14 +124,12 @@
     NSData *responseData = [request responseData];
     JSMapTile *tile = ((JSTilePullRequest *)request).pulledTile;
     [tile setImageData:responseData];
-    JSLog(@"did pull %d bytes for %@", [responseData length], tile);
     [self setNeedsDisplayInRect:[tile locationOnMap]];
   }];
   [request setFailedBlock:^{
     JSMapTile *tile = ((JSTilePullRequest *)request).pulledTile;
-    JSLog(@"pull error on: %@", tile);
   }];
-  [request startAsynchronous];
+  [operationQueue_ addOperation:request];
 
   return nil;
 }

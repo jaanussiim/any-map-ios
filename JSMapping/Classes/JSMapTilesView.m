@@ -111,7 +111,7 @@
 }
 
 - (void)scrollViewDidZoom:(UIScrollView *)scrollView {
-  JSLog(@"scrollViewDidZoom:%f", scrollView.zoomScale);
+
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {

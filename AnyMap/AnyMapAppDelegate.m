@@ -24,6 +24,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   [ASIHTTPRequest setDefaultCache:[ASIDownloadCache sharedCache]];
+  [ASIHTTPRequest setDefaultTimeOutSeconds:20];
 
   UIViewController *controller = [self createMainViewController];
 

@@ -22,6 +22,8 @@
 
 @synthesize wgsPoint = wgsPoint_;
 @synthesize mapPos = mapPos_;
+@synthesize accuracy = accuracy_;
+
 
 - (void)dealloc {
   [wgsPoint_ release];
@@ -30,9 +32,14 @@
   [super dealloc];
 }
 
+- (double)distanceToLocation:(JSLocation *)location {
+  return [self.wgsPoint distanceToPoint:location.wgsPoint];
+}
+
 + (JSLocation *)locationWithCoreLocation:(CLLocation *)location {
   JSLocation *result = [[[JSLocation alloc] init] autorelease];
   [result setWgsPoint:[JSWgsPoint wgsPointWithCoordinate:location.coordinate]];
+  [result setAccuracy:location.horizontalAccuracy];
   return result;
 }
 

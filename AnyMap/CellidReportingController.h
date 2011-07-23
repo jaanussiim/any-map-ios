@@ -14,22 +14,25 @@
  * limitations under the License.
  */
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface JSWgsPoint : NSObject {
-@private
-  double lon_;
-  double lat_;
-  CLLocation *payload_;
+@class JSMapView;
+
+
+@interface CellidReportingController : UIViewController {
+ @private
+  UIBarButtonItem *cancelButton_;
+  UIBarButtonItem *saveButton_;
+  UITextField *addressField_;
+  JSMapView *mapView_;
 }
 
-@property (nonatomic, readonly) double lon;
-@property (nonatomic, readonly) double lat;
-@property (nonatomic, retain) CLLocation *payload;
+@property (nonatomic, retain) IBOutlet UIBarButtonItem *cancelButton;
+@property (nonatomic, retain) IBOutlet UIBarButtonItem *saveButton;
+@property (nonatomic, retain) IBOutlet UITextField *addressField;
+@property (nonatomic, retain) JSMapView *mapView;
 
-- (id)initWithLon:(double)lon lat:(double)lat;
-+ (JSWgsPoint *)wgsWithLon:(double)lon lat:(double)lat;
-+ (JSWgsPoint *)wgsPointWithCoordinate:(CLLocationCoordinate2D)coordinate;
+- (IBAction)cancel:(id)sender;
+- (IBAction)save:(id)sender;
 
-- (double)distanceToPoint:(JSWgsPoint *)point;
 @end

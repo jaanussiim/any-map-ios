@@ -1,2 +1,4 @@
 gps_location.png/gps_location@2x.png
   http://www.iconfinder.com/icondetails/68004/128/_icon
+blue_pin.png/blue_pin@2x.png
+  http://www.iconfinder.com/icondetails/34219/64/gps_location_map_pin_push_pin_pushpin_icon

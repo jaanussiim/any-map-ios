@@ -81,6 +81,12 @@
 		EAA7467613D9A80200E2121C /* JSMapOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA7467513D9A80200E2121C /* JSMapOverlay.m */; };
 		EAA7467913D9A81100E2121C /* JSMapOverlayMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA7467813D9A81100E2121C /* JSMapOverlayMarker.m */; };
 		EAA7467C13D9A8DF00E2121C /* JSMapOverlaysView.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA7467B13D9A8DF00E2121C /* JSMapOverlaysView.m */; };
+		EAA7468A13DA413500E2121C /* CellidReportingController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA7468813DA413500E2121C /* CellidReportingController.m */; };
+		EAA7468B13DA413500E2121C /* CellidReportingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAA7468913DA413500E2121C /* CellidReportingController.xib */; };
+		EAA7469413DA44E000E2121C /* JSCellIDReportingService.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA7469313DA44E000E2121C /* JSCellIDReportingService.m */; };
+		EAA7469713DA45DA00E2121C /* blue_pin.png in Resources */ = {isa = PBXBuildFile; fileRef = EAA7469513DA45DA00E2121C /* blue_pin.png */; };
+		EAA7469813DA45DA00E2121C /* blue_pin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAA7469613DA45DA00E2121C /* blue_pin@2x.png */; };
+		EAA7469C13DA496A00E2121C /* CellIDRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA7469B13DA496A00E2121C /* CellIDRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,7 +135,6 @@
 		EA262B3D13D2D870006574FB /* LargeMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LargeMapViewController.m; sourceTree = "<group>"; };
 		EA262B3E13D2D870006574FB /* LargeMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LargeMapViewController.xib; sourceTree = "<group>"; };
 		EA262C4613D34ADC006574FB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		EA28A56913D4E7BA00050D12 /* downloading.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = downloading.png; sourceTree = "<group>"; };
 		EA38E01E13D784F5007D9190 /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
 		EA38E01F13D784F5007D9190 /* ASIDataCompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDataCompressor.h; sourceTree = "<group>"; };
 		EA38E02013D784F5007D9190 /* ASIDataCompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDataCompressor.m; sourceTree = "<group>"; };
@@ -211,6 +216,16 @@
 		EAA7467813D9A81100E2121C /* JSMapOverlayMarker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSMapOverlayMarker.m; sourceTree = "<group>"; };
 		EAA7467A13D9A8DF00E2121C /* JSMapOverlaysView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSMapOverlaysView.h; sourceTree = "<group>"; };
 		EAA7467B13D9A8DF00E2121C /* JSMapOverlaysView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSMapOverlaysView.m; sourceTree = "<group>"; };
+		EAA7468713DA413500E2121C /* CellidReportingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellidReportingController.h; sourceTree = "<group>"; };
+		EAA7468813DA413500E2121C /* CellidReportingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellidReportingController.m; sourceTree = "<group>"; };
+		EAA7468913DA413500E2121C /* CellidReportingController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellidReportingController.xib; sourceTree = "<group>"; };
+		EAA7468D13DA445E00E2121C /* JSService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSService.h; sourceTree = "<group>"; };
+		EAA7469213DA44E000E2121C /* JSCellIDReportingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCellIDReportingService.h; sourceTree = "<group>"; };
+		EAA7469313DA44E000E2121C /* JSCellIDReportingService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCellIDReportingService.m; sourceTree = "<group>"; };
+		EAA7469513DA45DA00E2121C /* blue_pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue_pin.png; sourceTree = "<group>"; };
+		EAA7469613DA45DA00E2121C /* blue_pin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue_pin@2x.png"; sourceTree = "<group>"; };
+		EAA7469A13DA496A00E2121C /* CellIDRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellIDRequest.h; sourceTree = "<group>"; };
+		EAA7469B13DA496A00E2121C /* CellIDRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellIDRequest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -296,6 +311,7 @@
 		EA262B1513D2CDE6006574FB /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				EAA7468C13DA444900E2121C /* Services */,
 				EAA7467D13DA2C5E00E2121C /* Extensions */,
 				EAA7467313D9A7EC00E2121C /* Overlays */,
 				EAA7463713D99AE400E2121C /* GPS */,
@@ -359,8 +375,9 @@
 		EA262B4113D2D8F2006574FB /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				EA6DDC7B13D2C2CF0054A79E /* MapViewController.h */,
-				EA6DDC7B13D2C2CF0054A79C /* MapViewController.m */,
+				EAA7469913DA495200E2121C /* Network */,
+				EAA7468E13DA448B00E2121C /* Services */,
+				EAA7468113DA40C300E2121C /* Controllers */,
 			);
 			name = Shared;
 			sourceTree = "<group>";
@@ -410,15 +427,6 @@
 			name = Components;
 			sourceTree = "<group>";
 		};
-		EA28A56813D4E7BA00050D12 /* graphics */ = {
-			isa = PBXGroup;
-			children = (
-				EA28A56913D4E7BA00050D12 /* downloading.png */,
-			);
-			name = graphics;
-			path = AnyMap/graphics;
-			sourceTree = "<group>";
-		};
 		EA38E01D13D784AB007D9190 /* asi-http-request */ = {
 			isa = PBXGroup;
 			children = (
@@ -460,7 +468,6 @@
 		EA6DDC4813D2C2CF0054A79B = {
 			isa = PBXGroup;
 			children = (
-				EA28A56813D4E7BA00050D12 /* graphics */,
 				EA262B0913D2CB70006574FB /* JSMapping */,
 				EA6DDC5D13D2C2CF0054A79B /* AnyMap */,
 				EA262AD313D2C692006574FB /* UnitTests */,
@@ -562,6 +569,8 @@
 		EAA7463D13D99D2900E2121C /* graphics */ = {
 			isa = PBXGroup;
 			children = (
+				EAA7469513DA45DA00E2121C /* blue_pin.png */,
+				EAA7469613DA45DA00E2121C /* blue_pin@2x.png */,
 				EAA7464413D99E1100E2121C /* 74-location.png */,
 				EAA7464513D99E1100E2121C /* 74-location@2x.png */,
 				EAA7464213D99D9600E2121C /* gps_location.png */,
@@ -587,6 +596,44 @@
 			children = (
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		EAA7468113DA40C300E2121C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EA6DDC7B13D2C2CF0054A79E /* MapViewController.h */,
+				EA6DDC7B13D2C2CF0054A79C /* MapViewController.m */,
+				EAA7468713DA413500E2121C /* CellidReportingController.h */,
+				EAA7468813DA413500E2121C /* CellidReportingController.m */,
+				EAA7468913DA413500E2121C /* CellidReportingController.xib */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		EAA7468C13DA444900E2121C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EAA7468D13DA445E00E2121C /* JSService.h */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		EAA7468E13DA448B00E2121C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EAA7469213DA44E000E2121C /* JSCellIDReportingService.h */,
+				EAA7469313DA44E000E2121C /* JSCellIDReportingService.m */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		EAA7469913DA495200E2121C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				EAA7469A13DA496A00E2121C /* CellIDRequest.h */,
+				EAA7469B13DA496A00E2121C /* CellIDRequest.m */,
+			);
+			name = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -688,6 +735,9 @@
 				EAA7464313D99D9600E2121C /* gps_location.png in Resources */,
 				EAA7464613D99E1100E2121C /* 74-location.png in Resources */,
 				EAA7464713D99E1100E2121C /* 74-location@2x.png in Resources */,
+				EAA7468B13DA413500E2121C /* CellidReportingController.xib in Resources */,
+				EAA7469713DA45DA00E2121C /* blue_pin.png in Resources */,
+				EAA7469813DA45DA00E2121C /* blue_pin@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -753,6 +803,9 @@
 				EAA7467613D9A80200E2121C /* JSMapOverlay.m in Sources */,
 				EAA7467913D9A81100E2121C /* JSMapOverlayMarker.m in Sources */,
 				EAA7467C13D9A8DF00E2121C /* JSMapOverlaysView.m in Sources */,
+				EAA7468A13DA413500E2121C /* CellidReportingController.m in Sources */,
+				EAA7469413DA44E000E2121C /* JSCellIDReportingService.m in Sources */,
+				EAA7469C13DA496A00E2121C /* CellIDRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

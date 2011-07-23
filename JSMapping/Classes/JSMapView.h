@@ -48,4 +48,8 @@
 - (void)redrawSubviews;
 
 - (CGFloat)zoomScale;
+
+- (void)addMapOverlay:(JSMapOverlay *)overlay;
+
+- (void)addGPSConsumer:(id<JSGPSConsumer>)gpsConsumer;
 @end

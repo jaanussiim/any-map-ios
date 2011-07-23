@@ -27,5 +27,6 @@
 @property (nonatomic, retain) IBOutlet JSMapView *mapView;
 
 - (IBAction)toggleGPSState:(id)sender;
+- (IBAction)cellidReporting:(id)sender;
 
 @end

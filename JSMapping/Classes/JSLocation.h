@@ -23,10 +23,14 @@
  @private
   JSWgsPoint *wgsPoint_;
   JSMapPos *mapPos_;
+  double accuracy_;
 }
 
 @property (nonatomic, retain) JSWgsPoint *wgsPoint;
 @property (nonatomic, retain) JSMapPos *mapPos;
+@property (nonatomic, assign) double accuracy;
+
+- (double)distanceToLocation:(JSLocation *)location;
 
 + (JSLocation *)locationWithCoreLocation:(CLLocation *)location;
 

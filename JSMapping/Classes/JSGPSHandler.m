@@ -80,6 +80,8 @@
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
+  JSLog(@"locationManager:didUpdateToLocation:%@", newLocation);
+  JSLog(@"accuracy: %f - %f", newLocation.horizontalAccuracy, newLocation.verticalAccuracy);
   JSLocation *location = [JSLocation locationWithCoreLocation:newLocation];
   NSArray *listeners = listeners_;
   for (id<JSGPSConsumer> consumer in listeners) {

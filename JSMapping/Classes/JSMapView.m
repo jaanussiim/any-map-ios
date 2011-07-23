@@ -140,4 +140,13 @@
 - (CGFloat)zoomScale {
   return mapTilesView_.zoomScale;
 }
+
+- (void)addMapOverlay:(JSMapOverlay *)overlay {
+  [mapOverlaysView_ addOverlay:overlay];
+}
+
+- (void)addGPSConsumer:(id<JSGPSConsumer>)gpsConsumer {
+  [gpsHandler_ addGPSConsumer:gpsConsumer];
+}
+
 @end

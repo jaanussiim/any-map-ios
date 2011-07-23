@@ -81,6 +81,7 @@
   [self calculateMapPosition:location];
   [nextLocations addObject:location];
   [self setLocations:[NSArray arrayWithArray:nextLocations]];
+  [mapView_ redrawSubviews];
 }
 
 - (void)clear {

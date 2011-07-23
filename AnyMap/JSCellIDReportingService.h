@@ -16,20 +16,22 @@
 
 #import <Foundation/Foundation.h>
 
-@interface JSWgsPoint : NSObject {
-@private
-  double lon_;
-  double lat_;
-  CLLocation *payload_;
+@protocol JSService;
+@protocol JSGPSConsumer;
+@class JSMapOverlay;
+@class JSLocation;
+
+@interface JSCellIDReportingService : NSObject <JSService, JSGPSConsumer> {
+ @private
+  NSString *serverAddress_;
+  JSMapOverlay *overlay_;
+  NSOperationQueue *requestsQueue_;
+  JSLocation *lastPushed_;
 }
 
-@property (nonatomic, readonly) double lon;
-@property (nonatomic, readonly) double lat;
-@property (nonatomic, retain) CLLocation *payload;
+@property (nonatomic, retain) JSMapOverlay *overlay;
+@property (nonatomic, retain) JSLocation *lastPushed;
 
-- (id)initWithLon:(double)lon lat:(double)lat;
-+ (JSWgsPoint *)wgsWithLon:(double)lon lat:(double)lat;
-+ (JSWgsPoint *)wgsPointWithCoordinate:(CLLocationCoordinate2D)coordinate;
+- (id)initWithAddress:(NSString *)string;
 
-- (double)distanceToPoint:(JSWgsPoint *)point;
 @end

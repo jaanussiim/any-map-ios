@@ -14,22 +14,9 @@
  * limitations under the License.
  */
 
-#import <Foundation/Foundation.h>
+#import "ASIHTTPRequest.h"
+#import "CellIDRequest.h"
 
-@interface JSWgsPoint : NSObject {
-@private
-  double lon_;
-  double lat_;
-  CLLocation *payload_;
-}
+@implementation CellIDRequest
 
-@property (nonatomic, readonly) double lon;
-@property (nonatomic, readonly) double lat;
-@property (nonatomic, retain) CLLocation *payload;
-
-- (id)initWithLon:(double)lon lat:(double)lat;
-+ (JSWgsPoint *)wgsWithLon:(double)lon lat:(double)lat;
-+ (JSWgsPoint *)wgsPointWithCoordinate:(CLLocationCoordinate2D)coordinate;
-
-- (double)distanceToPoint:(JSWgsPoint *)point;
 @end

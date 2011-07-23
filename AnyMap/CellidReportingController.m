@@ -14,15 +14,17 @@
  * limitations under the License.
  */
 
-#import "MapViewController.h"
-#import "JSMapView.h"
-#import "JSWgsPoint.h"
-#import "JSMicrosoftMap.h"
 #import "CellidReportingController.h"
+#import "JSCellIDReportingService.h"
+#import "JSMapOverlayMarker.h"
+#import "JSMapOverlay.h"
+#import "JSMapView.h"
 
+@implementation CellidReportingController
 
-@implementation MapViewController
-
+@synthesize cancelButton = cancelButton_;
+@synthesize saveButton = saveButton_;
+@synthesize addressField = addressField_;
 @synthesize mapView = mapView_;
 
 
@@ -35,6 +37,9 @@
 }
 
 - (void)dealloc {
+  [cancelButton_ release];
+  [saveButton_ release];
+  [addressField_ release];
   [mapView_ release];
   [super dealloc];
 }
@@ -46,6 +51,13 @@
   // Release any cached data, images, etc that aren't in use.
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+  [super viewWillAppear:animated];
+
+  [self.navigationItem setLeftBarButtonItem:cancelButton_];
+  [self.navigationItem setRightBarButtonItem:saveButton_];
+}
+
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad {
@@ -55,41 +67,30 @@
 
 - (void)viewDidUnload {
   [super viewDidUnload];
-  [self setMapView:nil];
+  // Release any retained subviews of the main view.
+  // e.g. self.myOutlet = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-  return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+  // Return YES for supported orientations
+  return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-  [super viewWillAppear:animated];
-
-  if (![mapView_ mappingStarted]) {
-    [mapView_ setDisplayedMap:[[[JSMicrosoftMap alloc] init] autorelease]];
-    [mapView_ startWithLocation:[JSWgsPoint wgsWithLon:26.716667 lat:58.383333] zoomLevel:13];
-  }
+- (IBAction)cancel:(id)sender {
+  [self dismissModalViewControllerAnimated:TRUE];
 }
 
-- (IBAction)toggleGPSState:(id)sender {
-  UIBarButtonItem *button = (UIBarButtonItem *)sender;
-  [button setStyle:(button.style == UIBarButtonItemStyleDone ? UIBarButtonItemStyleBordered : UIBarButtonItemStyleDone)];
-
-  if (button.style == UIBarButtonItemStyleDone) {
-    [mapView_ showGPSLocation];
-  } else {
-    [mapView_ removeGPSLocation];
-  }
+- (IBAction)save:(id)sender {
+  JSCellIDReportingService *service = [[JSCellIDReportingService alloc] initWithAddress:addressField_.text];
+  JSMapOverlayMarker *marker = [[JSMapOverlayMarker alloc] initWithImage:[UIImage imageNamed:@"blue_pin.png"] anchorPoint:CGPointMake(8, 16)];
+  JSMapOverlay *measurePins = [[JSMapOverlay alloc] initWithMarker:marker];
+  [service setOverlay:measurePins];
+  [mapView_ addMapOverlay:measurePins];
+  [mapView_ addGPSConsumer:service];
+  [measurePins release];
+  [marker release];
+  [service release];
+  [self dismissModalViewControllerAnimated:TRUE];
 }
-
-- (IBAction)cellidReporting:(id)sender {
-  CellidReportingController *reportingController = [[CellidReportingController alloc] init];
-  [reportingController setMapView:mapView_];
-  UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:reportingController];
-  [self presentModalViewController:navigationController animated:TRUE];
-  [navigationController release];
-  [reportingController release];
-}
-
 
 @end

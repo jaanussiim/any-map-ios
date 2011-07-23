@@ -51,4 +51,9 @@
   return [[[JSWgsPoint alloc] initWithLon:coordinate.longitude lat:coordinate.latitude] autorelease];
 }
 
+- (double)distanceToPoint:(JSWgsPoint *)point {
+  CLLocation *one = [[[CLLocation alloc] initWithLatitude:self.lat longitude:self.lon] autorelease];
+  CLLocation *two = [[[CLLocation alloc] initWithLatitude:point.lat longitude:point.lon] autorelease];
+  return [one distanceFromLocation:two];
+}
 @end

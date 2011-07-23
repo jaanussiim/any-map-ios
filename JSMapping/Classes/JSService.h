@@ -16,20 +16,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface JSWgsPoint : NSObject {
-@private
-  double lon_;
-  double lat_;
-  CLLocation *payload_;
-}
 
-@property (nonatomic, readonly) double lon;
-@property (nonatomic, readonly) double lat;
-@property (nonatomic, retain) CLLocation *payload;
+@protocol JSService <NSObject>
 
-- (id)initWithLon:(double)lon lat:(double)lat;
-+ (JSWgsPoint *)wgsWithLon:(double)lon lat:(double)lat;
-+ (JSWgsPoint *)wgsPointWithCoordinate:(CLLocationCoordinate2D)coordinate;
-
-- (double)distanceToPoint:(JSWgsPoint *)point;
 @end
